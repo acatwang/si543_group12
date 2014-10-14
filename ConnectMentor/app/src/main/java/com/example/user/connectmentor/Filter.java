@@ -5,6 +5,8 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.content.Intent;
+
 
 
 public class Filter extends Activity {
@@ -33,5 +35,30 @@ public class Filter extends Activity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+
+    //TODO
+    /** Save the selected conditions **/
+    public void setMajorView(){
+        // create Textview for each marjor and set a onClickListener to store the selected value
+    }
+
+    public void setYearView(){
+        // create Textview for each gender and set a onClickListener to store the selected value
+    }
+
+    public void setGenderView(){
+        // create Textview for each gender and set a onClickListener to store the selected value
+    }
+
+
+
+    /** Called when the user clicks the Research button */
+    public void doSearchByFilter(){
+        //TODO: How to Gather or selected value and send it to Overview?
+        // Send the selected criteria to find the corresponding users
+        //Intent searchByFilterintent = new Intent(this, OverviewActivity.class);
+
     }
 }

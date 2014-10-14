@@ -13,4 +13,9 @@
     <string name="title_activity_filter">Filter</string>
     <string name="hello_world">Hello world!</string>
 
+
+    <!-- Filter -->
+    <string name="filter_major_width">60sp</string>
+    <string name="hello_world">Hello world!</string>
+
 </resources>

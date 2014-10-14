@@ -59,33 +59,6 @@
         android:text="@string/user_year"
         android:textSize="20sp"
         android:layout_gravity="center_horizontal"/>
-<!--
-    <TableLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <TableRow
-            android:id="@+id/tableRow1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="20dp">
-
-            <TextView
-                android:id="@+id/textView1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/about_me_title"
-                android:textAppearance="?android:attr/textAppearanceLarge" />
-
-            <TextView
-                android:id="@+id/productID"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/about_me_content"
-                android:textAppearance="?android:attr/textAppearanceLarge" />
-        </TableRow>
-        </TableLayout>
--->
-
 
     <ExpandableListView
         android:id="@+id/lvExp"
