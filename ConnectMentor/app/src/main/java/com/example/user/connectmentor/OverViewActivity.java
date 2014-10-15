@@ -9,6 +9,9 @@ import java.util.ArrayList;
 import java.util.Map;
 import java.util.List;
 import java.util.HashMap;
+import android.content.Intent;
+import android.view.View;
+
 
 public class OverViewActivity extends Activity {
 
@@ -51,6 +54,11 @@ public class OverViewActivity extends Activity {
         HashMap<String, String> team = new HashMap<String, String>();
         team.put(key, name);
         return team;
+    }
+
+    public void goToFilter(View view){
+        Intent filterIntent = new Intent(this, Filter.class);
+        startActivity(filterIntent);
     }
 
 }
