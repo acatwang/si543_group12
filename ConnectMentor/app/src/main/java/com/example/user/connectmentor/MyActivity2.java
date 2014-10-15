@@ -1,4 +1,4 @@
-package com.example.ericachan.demo;
+package com.example.user.connectmentor;
 
 import android.app.Activity;
 import android.os.Bundle;

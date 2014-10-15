@@ -21,6 +21,7 @@
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
+
         <activity
             android:name=".HomeActivity"
             android:label="@string/app_name" >
@@ -38,13 +39,20 @@
             android:name=".Filter"
             android:label="@string/title_activity_filter" >
         </activity>
-        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/app_id"/>
-        <activity
-            android:name="com.facebook.LoginActivity" >
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/app_id" />
+
+        <activity android:name="com.facebook.LoginActivity" >
         </activity>
         <activity
             android:name=".UserLoginActivity"
             android:label="@string/title_activity_user_login" >
+        </activity>
+        <activity
+            android:name=".OverViewActivity"
+            android:label="@string/title_activity_over_view" >
         </activity>
     </application>
 

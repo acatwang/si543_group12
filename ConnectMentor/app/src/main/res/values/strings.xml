@@ -14,9 +14,9 @@
     <string name="title_activity_user_login">ConnectMentor-Log In</string>
     <string name="app_id">314406122077903</string>
 
-
     <!-- Filter -->
     <string name="filter_major_width">60sp</string>
     <string name="hello_world">Hello world!</string>
+    <string name="title_activity_over_view">OverViewActivity</string>
 
 </resources>
