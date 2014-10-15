@@ -51,8 +51,17 @@
             android:label="@string/title_activity_user_login" >
         </activity>
         <activity
+<<<<<<< Updated upstream
             android:name=".OverViewActivity"
             android:label="@string/title_activity_over_view" >
+=======
+            android:name=".Settings"
+            android:label="@string/title_activity_settings" >
+        </activity>
+        <activity
+            android:name=".MessageInbox"
+            android:label="@string/title_activity_message_inbox" >
+>>>>>>> Stashed changes
         </activity>
     </application>
 
