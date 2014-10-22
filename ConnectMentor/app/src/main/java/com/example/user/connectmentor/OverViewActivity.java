@@ -12,6 +12,7 @@ import java.util.List;
 import java.util.HashMap;
 import android.content.Intent;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
 import android.widget.ListView;
@@ -20,6 +21,8 @@ import android.widget.SimpleAdapter;
 
 public class OverViewActivity extends Activity {
 
+    /*Source:https://github.com/aboudalia/Teamivore/blob/master/Teamivore/app/src/main/java/edu/umich/teamivore/OverviewActivity.java*/
+    public final static String EXTRA_MESSAGE = "edu.umich.teamivore.MESSAGE";
     List <Map<String, String>> memberlist = new ArrayList<Map<String,String>>();
 
     @Override
@@ -31,6 +34,12 @@ public class OverViewActivity extends Activity {
         initializelist();
         SimpleAdapter simpleAdpt = new SimpleAdapter(this, memberlist, android.R.layout.simple_list_item_1, new String[] {"member"}, new int[] {android.R.id.text1});
         memberListView.setAdapter(simpleAdpt);
+        memberListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            public void onItemClick(AdapterView<?> parentAdapter, View view, int position,
+                                    long id) {
+                openMemberDetail(id);
+            }
+        });
     }
 
 
@@ -60,6 +69,9 @@ public class OverViewActivity extends Activity {
         memberlist.add(createMember("member", "Member 1"));
         memberlist.add(createMember("member", "Member 2"));
         memberlist.add(createMember("member", "Member 3"));
+        memberlist.add(createMember("member", "Member 4"));
+        memberlist.add(createMember("member", "Member 5"));
+        memberlist.add(createMember("member", "Member 6"));
 
     }
     /*Source:https://github.com/aboudalia/Teamivore/blob/master/Teamivore/app/src/main/java/edu/umich/teamivore/OverviewActivity.java*/
@@ -67,6 +79,13 @@ public class OverViewActivity extends Activity {
         HashMap<String, String> team = new HashMap<String, String>();
         team.put(key, name);
         return team;
+    }
+    /*Source:https://github.com/aboudalia/Teamivore/blob/master/Teamivore/app/src/main/java/edu/umich/teamivore/OverviewActivity.java*/
+    public void openMemberDetail(long id) {
+        Intent intent = new Intent(this, Profile.class);
+        String message = String.valueOf(id);
+        intent.putExtra(EXTRA_MESSAGE, message);
+        startActivity(intent);
     }
 
     public void goToFilter(View view){

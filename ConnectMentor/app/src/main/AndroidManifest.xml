@@ -52,7 +52,7 @@
         </activity>
         <activity
             android:name=".OverViewActivity"
-            android:label="@string/title_activity_over_view" >
+            android:label="ConnectMentor-User List" >
         </activity>
         <activity
             android:name=".Settings"
