@@ -57,7 +57,21 @@ public class OverViewActivity extends Activity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
         if (id == R.id.action_settings) {
-            return true;
+            Intent goSettingIntent = new Intent(this, Settings.class);
+            startActivity(goSettingIntent);
+        }
+        if (id == R.id.action_overview) {
+            Intent OverviewIntent = new Intent(this, OverViewActivity.class);
+            startActivity(OverviewIntent);
+        }
+        if (id == R.id.action_profile) {
+            Intent ProfileIntent = new Intent(this, Profile.class);
+            startActivity(ProfileIntent);
+        }
+        if (id == R.id.action_message) {
+            Intent MessageIntent = new Intent(this, MessageInbox.class);
+            startActivity(MessageIntent);
+
         }
         return super.onOptionsItemSelected(item);
     }
@@ -65,13 +79,18 @@ public class OverViewActivity extends Activity {
     private void initializelist()
     {
         //Demo data
-        //This function will retrieve records from database
         memberlist.add(createMember("member", "Member 1"));
         memberlist.add(createMember("member", "Member 2"));
         memberlist.add(createMember("member", "Member 3"));
         memberlist.add(createMember("member", "Member 4"));
         memberlist.add(createMember("member", "Member 5"));
         memberlist.add(createMember("member", "Member 6"));
+
+        //This function will retrieve records from database
+        // Make connection to DB
+        // Retrieve values of a column from table using Select statement
+        // loop through values
+         //memberlist.add(createMember("member", value));
 
     }
     /*Source:https://github.com/aboudalia/Teamivore/blob/master/Teamivore/app/src/main/java/edu/umich/teamivore/OverviewActivity.java*/
