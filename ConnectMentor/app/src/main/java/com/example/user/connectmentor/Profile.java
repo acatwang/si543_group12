@@ -1,9 +1,12 @@
-// Creadte by Yi-Yin Wang
+// Edit by Yi-Yin Wang
 package com.example.user.connectmentor;
 
+import android.app.ActionBar;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -34,6 +37,9 @@ public class Profile extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
+        //enable the action bar
+        ActionBar actionBar = getActionBar();
+
         addListnerOnButton();
 
         //TODO
@@ -56,6 +62,7 @@ public class Profile extends Activity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
+        MenuInflater inflater = getMenuInflater();
         getMenuInflater().inflate(R.menu.profile, menu);
         return true;
     }
@@ -66,8 +73,25 @@ public class Profile extends Activity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            return true;
+        switch(id){
+            case R.id.action_overview:
+                Intent goOvreviewIntent = new Intent(this, OverViewActivity.class);
+                startActivity(goOvreviewIntent);
+                break;
+            case  R.id.action_profile:
+                Intent goProfileIntent = new Intent(this, Profile.class);
+                startActivity(goProfileIntent);
+                break;
+            case R.id.action_message:
+                Intent goMessageIntent = new Intent(this, MessageInbox.class);
+                startActivity(goMessageIntent);
+                break;
+            case R.id.action_settings:
+                Intent goSettingIntent = new Intent(this, Settings.class);
+                startActivity(goSettingIntent);
+                break;
+            default:
+                break;
         }
         return super.onOptionsItemSelected(item);
     }
@@ -121,6 +145,11 @@ public class Profile extends Activity {
 
     public void getUserInfo(){
         // Retrieve specific user info based on Intent
+    }
+
+    public void startConversation(View view){
+        Intent talkIntent = new Intent(this, MessageInbox.class);
+        startActivity(talkIntent);
     }
 }
 

@@ -51,7 +51,6 @@
             android:label="@string/title_activity_user_login" >
         </activity>
         <activity
-<<<<<<< Updated upstream
             android:name=".OverViewActivity"
             android:label="@string/title_activity_over_view" >
 =======
