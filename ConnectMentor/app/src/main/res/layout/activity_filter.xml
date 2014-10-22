@@ -10,13 +10,17 @@
         android:layout_height="wrap_content"
         android:text="Filter"
         android:textSize="50sp"/>
-
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search"
+        android:layout_gravity="right"
+        android:onClick="doSearchByFilter"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Major"
         android:textSize="30sp"
-        android:layout_marginTop="30sp"
         android:layout_marginLeft="10sp"/>
     <GridLayout
         android:layout_width="wrap_content"
@@ -214,12 +218,7 @@
             android:layout_margin="5dp"/>
     </GridLayout>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Search"
-        android:layout_gravity="right"
-        android:onClick="doSearchByFilter"/>
+
 
 
 </LinearLayout>

@@ -8,7 +8,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.content.Intent;
-
+import android.view.View;
 
 
 public class Filter extends Activity {
@@ -94,7 +94,7 @@ public class Filter extends Activity {
 
 
     /** Called when the user clicks the Research button */
-    public void doSearchByFilter(){
+    public void doSearchByFilter(View view){
 
         Intent searchByFilterIntent = new Intent(this, OverViewActivity.class);
         // Pass selected value to overview to find the corresponding users
