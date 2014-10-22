@@ -28,7 +28,7 @@
         android:layout_marginTop="10sp"
         android:clickable="true">
         <TextView
-            android:width="@string/filter_major_width"
+            android:width="60sp"
             android:text="CS"
             android:textSize="30sp"
             android:layout_row="0"
@@ -37,7 +37,7 @@
             android:layout_margin="5dp"
             android:textAlignment="gravity" />
         <TextView
-            android:width="@string/filter_major_width"
+            android:width="60sp"
             android:text="EE"
             android:textSize="30sp"
             android:layout_row="0"
@@ -45,7 +45,7 @@
             android:background="#FFF"
             android:layout_margin="5dp" />
         <TextView
-            android:width="@string/filter_major_width"
+            android:width="60sp"
             android:text="ME"
             android:textSize="30sp"
             android:layout_row="0"
@@ -54,7 +54,7 @@
             android:layout_margin="5dp" />
 
         <TextView
-            android:width="@string/filter_major_width"
+            android:width="60sp"
             android:text="CE"
             android:textSize="30sp"
             android:layout_row="0"
@@ -62,7 +62,7 @@
             android:background="#FFF"
             android:layout_margin="5dp" />
         <TextView
-            android:width="@string/filter_major_width"
+            android:width="60sp"
             android:textAlignment="center"
             android:text="IOE"
             android:textSize="30sp"
@@ -71,7 +71,7 @@
             android:background="#FFF"
             android:layout_margin="5dp" />
         <TextView
-            android:width="@string/filter_major_width"
+            android:width="60sp"
             android:text="SI"
             android:textSize="30sp"
             android:layout_row="1"
@@ -79,7 +79,7 @@
             android:background="#FFF"
             android:layout_margin="5dp" />
         <TextView
-            android:width="@string/filter_major_width"
+            android:width="60sp"
             android:text="Art"
             android:textSize="30sp"
             android:layout_row="1"
@@ -87,8 +87,7 @@
             android:background="#FFF"
             android:layout_margin="5dp" />
         <TextView
-            android:width="@string/filter_major_width"
-
+            android:width="60sp"
             android:text="Econ"
             android:textSize="25sp"
             android:layout_row="1"
@@ -96,7 +95,7 @@
             android:background="#FFF"
             android:layout_margin="3dp" />
         <TextView
-            android:width="@string/filter_major_width"
+            android:width="60sp"
             android:text="Stat"
             android:textSize="30sp"
             android:layout_row="1"
@@ -104,7 +103,7 @@
             android:background="#FFF"
             android:layout_margin="5dp" />
         <TextView
-            android:width="@string/filter_major_width"
+            android:width="60sp"
             android:text="Math"
             android:textSize="25sp"
             android:layout_row="1"
