@@ -3,15 +3,26 @@ package com.example.user.connectmentor;
 
 import android.app.ActionBar;
 import android.app.Activity;
+import android.content.ClipData;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.content.Intent;
 import android.view.View;
+import android.widget.GridView;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 
 public class Filter extends Activity {
+
+    // Choice
+    GridView gridviewYear;
+    List<Map<String, String>> yearList = new ArrayList<Map<String,String>>();
+    //CustomGridViewAdapter customGridAdapter;
 
     // Declare Selection
     private String major;
@@ -25,6 +36,13 @@ public class Filter extends Activity {
 
         //enable the action bar
         ActionBar actionBar = getActionBar();
+
+        //TODO: add item to the grid
+        initYearGrid();
+        GridView gridviewYear = (GridView) findViewById(R.id.gridview_year);
+        //gridview.setAdapter(new ImageAdapter(this));
+
+        // TODO: add listener to each text, to make it clickable
     }
 
 
@@ -66,7 +84,12 @@ public class Filter extends Activity {
     }
 
 
-    //TODO
+    /* Add data to filter*/
+    private void initYearGrid(){
+        //yearList.add
+    }
+
+    //TODO: set the selected value after click
     /** Save the selected conditions **/
     public void setMajorView(){
         // create Textview for each marjor and set a onClickListener to store the selected value
