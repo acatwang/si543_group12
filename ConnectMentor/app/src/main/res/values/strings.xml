@@ -17,11 +17,8 @@
     <!-- Filter -->
     <string name="filter_major_width">60sp</string>
     <string name="hello_world">Hello world!</string>
-<<<<<<< Updated upstream
     <string name="title_activity_over_view">OverViewActivity</string>
-=======
     <string name="title_activity_settings">Settings</string>
     <string name="title_activity_message_inbox">MessageInbox</string>
->>>>>>> Stashed changes
 
 </resources>
