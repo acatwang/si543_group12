@@ -79,13 +79,18 @@ public class OverViewActivity extends Activity {
     private void initializelist()
     {
         //Demo data
-        //This function will retrieve records from database
         memberlist.add(createMember("member", "Member 1"));
         memberlist.add(createMember("member", "Member 2"));
         memberlist.add(createMember("member", "Member 3"));
         memberlist.add(createMember("member", "Member 4"));
         memberlist.add(createMember("member", "Member 5"));
         memberlist.add(createMember("member", "Member 6"));
+
+        //Retrieving values from DB
+        //Make connection to DB
+        //Retrieve a column from a table in DB
+        //Loop through values
+         //memberlist.add(createMember("member", value));
 
     }
     /*Source:https://github.com/aboudalia/Teamivore/blob/master/Teamivore/app/src/main/java/edu/umich/teamivore/OverviewActivity.java*/
