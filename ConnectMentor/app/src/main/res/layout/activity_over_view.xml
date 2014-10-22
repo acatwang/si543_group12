@@ -1,23 +1,28 @@
+<!-- Created by Kushank Raghav -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:weightSum="1">
- <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:weightSum="1.0"
+    tools:context="com.example.user.connectmentor.OverViewActivity">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:weightSum="1">
-
-
-    <SearchView
-        android:layout_width="295dp"
         android:layout_height="wrap_content"
-        android:id="@+id/searchView" />
+        android:orientation="horizontal"
+       >
 
-    <Button
+
+
+     <SearchView
+         android:layout_width="295dp"
+         android:layout_height="wrap_content"
+         android:id="@+id/searchView" />
+
+
+     <Button
         style="?android:attr/buttonStyleSmall"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -27,10 +32,10 @@
         android:onClick="goToFilter"/>
 
      </LinearLayout>
-
-    <ListView
+  <ListView
         android:id="@+id/listview1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"></ListView>
+
 
 </LinearLayout>
