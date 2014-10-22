@@ -74,7 +74,8 @@ public class UserLoginActivity extends Activity {
            //insert password in db
            //Login the user, use Intent to switch to next Activity -> OverView Activity
 
-
+        Intent intent = new Intent(this,OverViewActivity.class);
+        startActivity(intent);
 
     }
 

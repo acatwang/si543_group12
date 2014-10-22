@@ -11,17 +11,25 @@ import java.util.List;
 import java.util.HashMap;
 import android.content.Intent;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.ListAdapter;
+import android.widget.ListView;
+import android.widget.SimpleAdapter;
 
 
 public class OverViewActivity extends Activity {
 
-    List <Map<String, String>> memberlist = new ArrayList<Map<String, String>>();
+    List <Map<String, String>> memberlist = new ArrayList<Map<String,String>>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_over_view);
+        /*Source:https://github.com/aboudalia/Teamivore/blob/master/Teamivore/app/src/main/java/edu/umich/teamivore/OverviewActivity.java*/
+        ListView memberListView = (ListView) findViewById(R.id.listview1);
         initializelist();
+        SimpleAdapter simpleAdpt = new SimpleAdapter(this, memberlist, android.R.layout.simple_list_item_1, new String[] {"member"}, new int[] {android.R.id.text1});
+        memberListView.setAdapter(simpleAdpt);
     }
 
 
@@ -43,13 +51,17 @@ public class OverViewActivity extends Activity {
         }
         return super.onOptionsItemSelected(item);
     }
+    /*Source:https://github.com/aboudalia/Teamivore/blob/master/Teamivore/app/src/main/java/edu/umich/teamivore/OverviewActivity.java*/
     private void initializelist()
     {
+        //Demo data
+        //This function will retrieve records from database
         memberlist.add(createMember("member", "Member 1"));
         memberlist.add(createMember("member", "Member 2"));
         memberlist.add(createMember("member", "Member 3"));
 
     }
+    /*Source:https://github.com/aboudalia/Teamivore/blob/master/Teamivore/app/src/main/java/edu/umich/teamivore/OverviewActivity.java*/
     private HashMap<String, String> createMember(String key, String name) {
         HashMap<String, String> team = new HashMap<String, String>();
         team.put(key, name);
