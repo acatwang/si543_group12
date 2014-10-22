@@ -45,14 +45,14 @@
         </activity>
         <meta-data
             android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version" />
+            android:value="4.4.52" />
         <activity
             android:name=".UserLoginActivity"
-            android:label="@string/title_activity_user_login" >
+            android:label="Log In" >
         </activity>
         <activity
             android:name=".OverViewActivity"
-            android:label="ConnectMentor-User List" >
+            android:label="User List" >
         </activity>
         <activity
             android:name=".Settings"
