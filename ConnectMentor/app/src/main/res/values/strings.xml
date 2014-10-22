@@ -17,13 +17,6 @@
     <!-- Filter -->
     <string name="filter_major_width">60sp</string>
     <string name="hello_world">Hello world!</string>
-<<<<<<< HEAD
-
-
-
-
-=======
->>>>>>> 9de36e2fa7533f0def4bdbc92f2885927e258c17
     <string name="title_activity_over_view">OverViewActivity</string>
     <string name="title_activity_settings">Settings</string>
     <string name="title_activity_message_inbox">MessageInbox</string>
