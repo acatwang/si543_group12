@@ -4,15 +4,37 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.CompoundButton;
+import android.widget.ToggleButton;
 
 
-public class Settings extends Activity {
+public class Settings extends Activity implements CompoundButton.OnCheckedChangeListener{
 
+
+    ToggleButton t:
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
+        t=findViewById(R.id.toggleButton);
+
+        t.setOnCheckedChangeListener(this);
     }
+
+    ToggleButton t:
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_settings);
+        t=findViewById(R.id.toggleButton2);
+
+        t.setOnCheckedChangeListener(this);
+    }
+
+
+
+
 
 
     @Override
@@ -33,10 +55,10 @@ public class Settings extends Activity {
         }
         return super.onOptionsItemSelected(item);
     }
+
+    }
 }
 
 //Notification- on/off button
-//Msg will pop up if the box is checked for 'Get New Messages'
-//Notified when new mentor are in the system
 //GPS can be turned on/off
 //Help and about in the bottom

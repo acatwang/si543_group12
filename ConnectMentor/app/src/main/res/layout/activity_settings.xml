@@ -20,28 +20,6 @@
         android:layout_marginLeft="50dp"
         android:layout_marginTop="60dp" />
 
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Get New Message"
-        android:id="@+id/checkBox"
-        android:layout_toEndOf="@+id/textView"
-        android:checked="false"
-        android:layout_marginTop="42dp"
-        android:layout_below="@+id/textView"
-        android:layout_alignLeft="@+id/textView"
-        android:layout_alignStart="@+id/textView" />
-
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New Mentor"
-        android:id="@+id/checkBox2"
-        android:checked="false"
-        android:layout_below="@+id/checkBox"
-        android:layout_alignLeft="@+id/checkBox"
-        android:layout_alignStart="@+id/checkBox" />
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -49,15 +27,14 @@
         android:text="Show GPS"
         android:id="@+id/textView2"
         android:layout_centerVertical="true"
-        android:layout_alignLeft="@+id/checkBox2"
-        android:layout_alignStart="@+id/checkBox2" />
+        android:layout_alignLeft="@+id/textView" />
 
     <ToggleButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Show GPS"
+        android:textOff="Off"
+        android:textOn="On"
         android:id="@+id/toggleButton2"
-        android:layout_toEndOf="@+id/checkBox"
         android:checked="false"
         android:layout_centerVertical="true"
         android:layout_alignLeft="@+id/toggleButton"
@@ -83,7 +60,8 @@
     <ToggleButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New ToggleButton"
+        android:textOff="Off"
+        android:textOn="On"
         android:id="@+id/toggleButton"
         android:layout_toEndOf="@+id/textView3"
         android:layout_alignTop="@+id/textView"
