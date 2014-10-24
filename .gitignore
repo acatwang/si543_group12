@@ -1,0 +1,4 @@
+
+*.bin
+
+ConnectMentor/build/intermediates/dex-cache/cache.xml
