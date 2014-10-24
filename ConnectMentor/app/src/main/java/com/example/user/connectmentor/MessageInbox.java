@@ -1,9 +1,11 @@
 package com.example.user.connectmentor;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 
 public class MessageInbox extends Activity {
@@ -33,9 +35,26 @@ public class MessageInbox extends Activity {
         }
         return super.onOptionsItemSelected(item);
     }
+    public void login(View view)
+    {
+        Intent intent = new Intent(this,UserLoginActivity.class);
+        startActivity(intent);
+
+    }
+
+    public void register(View view)
+    {
+        Intent intent = new Intent(this,UserLoginActivity.class);
+        startActivity(intent);
+
+    }
 }
 
 
+
 //Messages show in a list view when received
+
+
+
 //Name of the person sent from
 //The first line of the message displayed
