@@ -1,3 +1,4 @@
+//editied by Erica Chan
 package com.example.user.connectmentor;
 
 import android.app.Activity;
@@ -24,31 +25,38 @@ public class MessageInbox extends Activity {
         return true;
     }
 
+
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            return true;
+        switch(id){
+            case R.id.action_overview:
+                Intent goOvreviewIntent = new Intent(this, OverViewActivity.class);
+                startActivity(goOvreviewIntent);
+                break;
+            case  R.id.action_profile:
+                Intent goProfileIntent = new Intent(this, Profile.class);
+                startActivity(goProfileIntent);
+                break;
+            case R.id.action_message:
+                Intent goMessageIntent = new Intent(this, MessageInbox.class);
+                startActivity(goMessageIntent);
+                break;
+            case R.id.action_settings:
+                Intent goSettingIntent = new Intent(this, Settings.class);
+                startActivity(goSettingIntent);
+                break;
+            default:
+                break;
         }
         return super.onOptionsItemSelected(item);
-    }
-    public void login(View view)
-    {
-        Intent intent = new Intent(this,UserLoginActivity.class);
-        startActivity(intent);
+    }}
 
-    }
 
-    public void register(View view)
-    {
-        Intent intent = new Intent(this,UserLoginActivity.class);
-        startActivity(intent);
-
-    }
-}
 
 
 

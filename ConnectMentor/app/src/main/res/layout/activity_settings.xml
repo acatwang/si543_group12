@@ -67,4 +67,23 @@
         android:layout_alignTop="@+id/textView"
         android:layout_toRightOf="@+id/textView3" />
 
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Messages"
+        android:id="@+id/checkBox"
+        android:layout_below="@+id/toggleButton"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_alignStart="@+id/textView" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Mentors"
+        android:id="@+id/checkBox2"
+        android:layout_below="@+id/checkBox"
+        android:layout_alignLeft="@+id/checkBox"
+        android:layout_alignStart="@+id/checkBox" />
+
+
 </RelativeLayout>

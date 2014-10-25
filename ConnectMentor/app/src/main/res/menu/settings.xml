@@ -4,21 +4,24 @@
     <item android:id="@+id/action_profile"
         android:title="Profile"
         android:orderInCategory="100"
-        android:showAsAction="ifRoom"
+        android:showAsAction="always"
         />
     <item android:id="@+id/action_overview"
         android:title="Overview"
         android:orderInCategory="100"
-        android:showAsAction="ifRoom"
+        android:showAsAction="always"
         />
     <item android:id="@+id/action_message"
         android:title="Message"
         android:orderInCategory="100"
-        android:showAsAction="ifRoom"
+        android:showAsAction="always"
+        android:icon="@android:drawable/ic_dialog_email"
         />
     <item android:id="@+id/action_settings"
         android:title="@string/action_settings"
         android:orderInCategory="100"
-        android:showAsAction="ifRoom" />
+        android:showAsAction="always"
+        android:icon="@android:drawable/ic_dialog_info"
+        />
 
 </menu>
