@@ -50,9 +50,10 @@
             android:name=".UserLoginActivity"
             android:label="Log In" >
         </activity>
-        <activity
+        <activity android:uiOptions="splitActionBarWhenNarrow"
             android:name=".OverViewActivity"
-            android:label="User List" >
+            android:label="User List"
+           >
         </activity>
         <activity
             android:name=".Settings"
