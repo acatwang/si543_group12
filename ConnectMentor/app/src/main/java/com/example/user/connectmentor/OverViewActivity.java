@@ -73,6 +73,10 @@ public class OverViewActivity extends Activity {
             startActivity(MessageIntent);
 
         }
+        if (id == R.id.action_logout) {
+            Intent logoutIntent = new Intent(this,UserLoginActivity.class);
+            startActivity(logoutIntent);
+        }
         return super.onOptionsItemSelected(item);
     }
     /*Source:https://github.com/aboudalia/Teamivore/blob/master/Teamivore/app/src/main/java/edu/umich/teamivore/OverviewActivity.java*/
