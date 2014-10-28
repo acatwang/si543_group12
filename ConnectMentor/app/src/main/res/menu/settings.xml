@@ -17,11 +17,17 @@
         android:showAsAction="always"
         android:icon="@android:drawable/ic_dialog_email"
         />
+
     <item android:id="@+id/action_settings"
         android:title="@string/action_settings"
         android:orderInCategory="100"
         android:showAsAction="always"
         android:icon="@android:drawable/ic_dialog_info"
+        />
+    <item android:id="@+id/action_logout"
+        android:title="LogOut"
+        android:orderInCategory="100"
+        android:showAsAction="ifRoom"
         />
 
 </menu>
