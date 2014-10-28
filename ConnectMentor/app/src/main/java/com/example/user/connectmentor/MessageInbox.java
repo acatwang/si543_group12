@@ -50,6 +50,10 @@ public class MessageInbox extends Activity {
                 Intent goSettingIntent = new Intent(this, Settings.class);
                 startActivity(goSettingIntent);
                 break;
+            case R.id.action_logout:
+                Intent logoutIntent = new Intent(this,UserLoginActivity.class);
+                startActivity(logoutIntent);
+                break;
             default:
                 break;
         }
