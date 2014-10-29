@@ -10,6 +10,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.content.Intent;
 import android.view.View;
+import android.widget.GridLayout;
 import android.widget.GridView;
 
 import java.util.ArrayList;
@@ -39,7 +40,7 @@ public class Filter extends Activity {
 
         //TODO: add item to the grid
         initYearGrid();
-        GridView gridviewYear = (GridView) findViewById(R.id.gridview_year);
+        GridLayout gridviewYear = (GridLayout) findViewById(R.id.gridview_year);
         //gridview.setAdapter(new ImageAdapter(this));
 
         // TODO: add listener to each text, to make it clickable
