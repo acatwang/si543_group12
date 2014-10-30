@@ -29,10 +29,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Profile"
+            android:name=".Profile" android:uiOptions="splitActionBarWhenNarrow"
             android:label="@string/app_name" >
         </activity>
-        <activity
+        <activity android:uiOptions="splitActionBarWhenNarrow"
             android:name=".Filter"
             android:label="@string/title_activity_filter" >
         </activity>

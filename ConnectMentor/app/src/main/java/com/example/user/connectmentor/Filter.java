@@ -36,7 +36,7 @@ public class Filter extends Activity {
         setContentView(R.layout.activity_filter);
 
         //enable the action bar
-        ActionBar actionBar = getActionBar();
+        //ActionBar actionBar = getActionBar();
 
         //TODO: add item to the grid
         initYearGrid();
@@ -50,9 +50,10 @@ public class Filter extends Activity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        MenuInflater inflater = getMenuInflater();
+        //MenuInflater inflater = getMenuInflater();
         getMenuInflater().inflate(R.menu.filter, menu);
-        return super.onCreateOptionsMenu(menu);
+        //return super.onCreateOptionsMenu(menu);
+        return true;
     }
 
     @Override
