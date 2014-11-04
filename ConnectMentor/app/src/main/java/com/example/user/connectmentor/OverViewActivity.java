@@ -22,18 +22,22 @@ import android.widget.SimpleAdapter;
 public class OverViewActivity extends Activity {
 
     /*Source:https://github.com/aboudalia/Teamivore/blob/master/Teamivore/app/src/main/java/edu/umich/teamivore/OverviewActivity.java*/
+    /*Source: http://www.androidhive.info/2012/02/android-custom-listview-with-image-and-text/*/
     public final static String EXTRA_MESSAGE = "edu.umich.teamivore.MESSAGE";
-    List <Map<String, String>> memberlist = new ArrayList<Map<String,String>>();
+    ArrayList <HashMap<String, String>> recordsList = new ArrayList <HashMap<String, String>>();
+    static final String KEY_NAME = "name";
+    static final String KEY_MAJOR = "major";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_over_view);
         /*Source:https://github.com/aboudalia/Teamivore/blob/master/Teamivore/app/src/main/java/edu/umich/teamivore/OverviewActivity.java*/
+        /*Source: http://www.androidhive.info/2012/02/android-custom-listview-with-image-and-text/*/
         ListView memberListView = (ListView) findViewById(R.id.listview1);
         initializelist();
-        SimpleAdapter simpleAdpt = new SimpleAdapter(this, memberlist, android.R.layout.simple_list_item_1, new String[] {"member"}, new int[] {android.R.id.text1});
-        memberListView.setAdapter(simpleAdpt);
+        OverviewListAdapter adapter=new OverviewListAdapter(this, recordsList);
+        memberListView.setAdapter(adapter);
         memberListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parentAdapter, View view, int position,
                                     long id) {
@@ -83,12 +87,12 @@ public class OverViewActivity extends Activity {
     private void initializelist()
     {
         //Demo data
-        memberlist.add(createMember("member", "Member 1"));
-        memberlist.add(createMember("member", "Member 2"));
-        memberlist.add(createMember("member", "Member 3"));
-        memberlist.add(createMember("member", "Member 4"));
-        memberlist.add(createMember("member", "Member 5"));
-        memberlist.add(createMember("member", "Member 6"));
+        recordsList.add(createMember("Andy", "IOE"));
+        recordsList.add(createMember("Anthony", "EE"));
+        recordsList.add(createMember("Kurt", "CS"));
+        recordsList.add(createMember("Kush", "SI"));
+        recordsList.add(createMember("Alison", "SI"));
+        recordsList.add(createMember("Erica", "SI"));
 
         //This function will retrieve records from database
         // Make connection to DB
@@ -98,9 +102,11 @@ public class OverViewActivity extends Activity {
 
     }
     /*Source:https://github.com/aboudalia/Teamivore/blob/master/Teamivore/app/src/main/java/edu/umich/teamivore/OverviewActivity.java*/
+     /*Source: http://www.androidhive.info/2012/02/android-custom-listview-with-image-and-text/*/
     private HashMap<String, String> createMember(String key, String name) {
         HashMap<String, String> team = new HashMap<String, String>();
-        team.put(key, name);
+        team.put(KEY_NAME, key);
+        team.put(KEY_MAJOR, name);
         return team;
     }
     /*Source:https://github.com/aboudalia/Teamivore/blob/master/Teamivore/app/src/main/java/edu/umich/teamivore/OverviewActivity.java*/
