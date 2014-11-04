@@ -5,11 +5,13 @@
         android:title="Profile"
         android:orderInCategory="100"
         android:showAsAction="always"
+        android:icon="@drawable/ic_action_person"
         />
     <item android:id="@+id/action_overview"
         android:title="Overview"
         android:orderInCategory="100"
         android:showAsAction="always"
+        android:icon="@drawable/ic_action_view_as_list"
         />
     <item android:id="@+id/action_message"
         android:title="Message"
@@ -22,12 +24,13 @@
         android:title="@string/action_settings"
         android:orderInCategory="100"
         android:showAsAction="always"
-        android:icon="@android:drawable/ic_dialog_info"
+        android:icon="@drawable/ic_action_settings"
         />
     <item android:id="@+id/action_logout"
         android:title="LogOut"
         android:orderInCategory="100"
         android:showAsAction="ifRoom"
         />
+
 
 </menu>
