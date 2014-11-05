@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.content.Intent;
 import com.facebook.*;
@@ -14,6 +15,7 @@ import com.facebook.model.*;
 
 
 public class UserLoginActivity extends Activity {
+    public final static String EXTRA_MESSAGE = "edu.umich.teamivore.MESSAGE";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,6 +77,12 @@ public class UserLoginActivity extends Activity {
            //Login the user, use Intent to switch to next Activity -> OverView Activity
 
         Intent intent = new Intent(this,OverViewActivity.class);
+        //Source: https://developer.android.com/training/basics/firstapp/starting-activity.html
+        // To send the username to next view, get its value from the user name text box
+        EditText editText = (EditText) findViewById(R.id.editText);
+        String message = editText.getText().toString();
+        // Send the string using Intent
+        intent.putExtra(EXTRA_MESSAGE,message);
         startActivity(intent);
 
     }
