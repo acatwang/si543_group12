@@ -16,7 +16,7 @@ android:padding="5dip" >
     android:textColor="#040404"
     android:typeface="sans"
     android:textSize="25dip"
-    android:textStyle="bold"/>
+    android:textStyle="italic|bold"/>
 
 
 <!-- Rightend Major -->
@@ -30,7 +30,7 @@ android:padding="5dip" >
     android:text="ECE"
     android:textSize="20dip"
     android:layout_marginRight="5dip"
-    android:textColor="#10bcc9"
+    android:textColor="#040404"
     android:textStyle="bold"/>
 
 
