@@ -38,12 +38,10 @@ public class OverViewActivity extends Activity {
         Intent intent = getIntent();
         String messagestring = intent.getStringExtra(UserLoginActivity.EXTRA_MESSAGE);
         //Setting title of Action bar with user name entered in login page
-        if (messagestring != null || !messagestring.isEmpty()) {
-            getActionBar().setTitle("User List for "+messagestring);
-        }
-        else
-        {
-            getActionBar().setTitle("User List");
+        if (messagestring != null) {
+            if(!messagestring.isEmpty()) {
+                getActionBar().setTitle("User List for " + messagestring);
+            }
         }
 
         /*Source:https://github.com/aboudalia/Teamivore/blob/master/Teamivore/app/src/main/java/edu/umich/teamivore/OverviewActivity.java*/
