@@ -26,7 +26,6 @@ public class OverViewActivity extends Activity {
     /*Source: http://www.androidhive.info/2012/02/android-custom-listview-with-image-and-text/*/
     public final static String EXTRA_MESSAGE = "edu.umich.teamivore.MESSAGE";
     ArrayList <HashMap<String, String>> recordsList = new ArrayList <HashMap<String, String>>();
-    String messagestring = "user_name";
     static final String KEY_NAME = "name";
     static final String KEY_MAJOR = "major";
 
@@ -37,9 +36,16 @@ public class OverViewActivity extends Activity {
         /*Source:https://github.com/aboudalia/Teamivore/blob/master/app/src/main/java/edu/umich/teamivore/TeamDetailActivity.java*/
         // Receiving Message from the User Login Activity - User Name
         Intent intent = getIntent();
-        messagestring = intent.getStringExtra(UserLoginActivity.EXTRA_MESSAGE);
+        String messagestring = intent.getStringExtra(UserLoginActivity.EXTRA_MESSAGE);
         //Setting title of Action bar with user name entered in login page
-        getActionBar().setTitle("User List for "+messagestring);
+        if (messagestring != null || !messagestring.isEmpty()) {
+            getActionBar().setTitle("User List for "+messagestring);
+        }
+        else
+        {
+            getActionBar().setTitle("User List");
+        }
+
         /*Source:https://github.com/aboudalia/Teamivore/blob/master/Teamivore/app/src/main/java/edu/umich/teamivore/OverviewActivity.java*/
         /*Source: http://www.androidhive.info/2012/02/android-custom-listview-with-image-and-text/*/
         ListView memberListView = (ListView) findViewById(R.id.listview1);
