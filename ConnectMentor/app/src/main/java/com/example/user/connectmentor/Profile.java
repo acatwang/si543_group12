@@ -17,6 +17,7 @@ import android.widget.ExpandableListView.OnChildClickListener;
 import android.widget.ExpandableListView.OnGroupClickListener;
 import android.widget.ExpandableListView.OnGroupCollapseListener;
 import android.widget.ExpandableListView.OnGroupExpandListener;
+import android.widget.TextView;
 import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -31,7 +32,9 @@ public class Profile extends Activity {
     ExpandableListView expListView;
     List<String> listDataHeader;
     HashMap<String, List<String>> listDataChild;
-
+    ArrayList <HashMap<String, String>> usersList = new ArrayList <HashMap<String, String>>();
+    static final String KEY_NAME = "name";
+    static final String KEY_MAJOR = "major";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,8 +45,24 @@ public class Profile extends Activity {
 
         addListnerOnButton();
 
-        //TODO
-        addListnerOnBtnTalk();
+        // Get the message from the intent
+
+        initUserList();
+
+
+        Intent intent = getIntent();
+        String message = intent.getStringExtra(OverViewActivity.EXTRA_MESSAGE);
+
+        int id = (int) Long.parseLong(message);
+        // Create the text view
+        TextView textViewID = (TextView) findViewById(R.id.textView_userid);
+        textViewID.setText("User ID: "+ id);
+
+        TextView textView = (TextView) findViewById(R.id.textView_username);
+        // TODO: get user information from DB using user ID instead of typing
+        textView.setText("Andy");
+
+
 
         // get the listview
         expListView = (ExpandableListView) findViewById(R.id.lvExp);
@@ -54,10 +73,25 @@ public class Profile extends Activity {
         expListView.setAdapter(listAdapter);
 
 
-        //TODO
+        //TODO: Connect with database to get user info
         getUserInfo();
     }
 
+    private void initUserList(){
+        usersList.add(createMember("Andy", "IOE"));
+        usersList.add(createMember("Anthony", "EE"));
+        usersList.add(createMember("Kurt", "CS"));
+        usersList.add(createMember("Kush", "SI"));
+        usersList.add(createMember("Alison", "SI"));
+        usersList.add(createMember("Erica", "SI"));
+    };
+
+    private HashMap<String, String> createMember(String key, String name) {
+        HashMap<String, String> team = new HashMap<String, String>();
+        team.put(KEY_NAME, key);
+        team.put(KEY_MAJOR, name);
+        return team;
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -113,33 +147,37 @@ public class Profile extends Activity {
         });
     }
 
-    public void addListnerOnBtnTalk(){
-        // Send intent to messenger
-    }
 
+
+    // Programatically set data
     private void prepareListData(){
         listDataHeader = new ArrayList<String>();
         listDataChild = new HashMap<String, List<String>>();
 
-        // Adding child(hearder) data
+        /* Set List Data Header */
         listDataHeader.add("About me");
         listDataHeader.add("Coursework");
         listDataHeader.add("Skills");
 
         // Adding child(Content) data
         List<String> aboutme = new ArrayList<String>();
+        // for now we add mock-up information. The content can be get from DB using function getUserInfo(userid)
         aboutme.add("Hi I am andy");
 
-        // Adding child(Content) data
+        /* Add Coursework*/
         List<String> coursework = new ArrayList<String>();
+        // for now we add mock-up information. The content can be get from DB using function getUserInfo(userid)
         coursework.add("Java");
         coursework.add("Data Manipulation");
         coursework.add("InfoViz");
 
         // Adding child(Content) data
         List<String> skills = new ArrayList<String>();
+        // for now we add mock-up information. The content can be get from DB using function getUserInfo(userid)
         skills.add("Android");
         skills.add("programming");
+
+
         listDataChild.put(listDataHeader.get(0), aboutme); // Header, Child data
         listDataChild.put(listDataHeader.get(1), coursework);
         listDataChild.put(listDataHeader.get(2), skills);
