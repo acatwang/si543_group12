@@ -3,6 +3,7 @@ package com.example.user.connectmentor;
 
 import android.app.ActionBar;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -18,6 +19,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+import android.app.FragmentManager;
 
 
 public class OverViewActivity extends Activity {
@@ -90,8 +92,11 @@ public class OverViewActivity extends Activity {
 
         }
         if (id == R.id.action_logout) {
-            Intent logoutIntent = new Intent(this,UserLoginActivity.class);
-            startActivity(logoutIntent);
+            //Source:http://www.coderzheaven.com/2013/02/14/dialogfragments-android-simple-example/
+            FragmentManager fm = getFragmentManager();
+            MyDialogFragment testDialog = new MyDialogFragment();
+            testDialog.setRetainInstance(true);
+            testDialog.show(fm,"My_Dialog_Fragment");
         }
         return super.onOptionsItemSelected(item);
     }

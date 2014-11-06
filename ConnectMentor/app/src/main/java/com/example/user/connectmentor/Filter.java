@@ -3,6 +3,7 @@ package com.example.user.connectmentor;
 
 import android.app.ActionBar;
 import android.app.Activity;
+import android.app.FragmentManager;
 import android.content.ClipData;
 import android.os.Bundle;
 import android.view.Menu;
@@ -80,8 +81,11 @@ public class Filter extends Activity {
                 startActivity(goSettingIntent);
                 break;
             case R.id.action_logout:
-                Intent logoutIntent = new Intent(this,UserLoginActivity.class);
-                startActivity(logoutIntent);
+                //Source:http://www.coderzheaven.com/2013/02/14/dialogfragments-android-simple-example/
+                FragmentManager fm = getFragmentManager();
+                MyDialogFragment testDialog = new MyDialogFragment();
+                testDialog.setRetainInstance(true);
+                testDialog.show(fm, "My_Dialog_Fragment");
                 break;
             default:
                 break;
