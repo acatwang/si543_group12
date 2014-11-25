@@ -21,4 +21,18 @@
     <string name="title_activity_settings">Settings</string>
     <string name="title_activity_message_inbox">MessageInbox</string>
 
+    <!-- MessageBox -->
+    <string-array name="titles">
+        <item>Peter</item>
+        <item>Kushank</item>
+        <item>Allison</item>
+        <item>Erica</item>
+    </string-array>
+    <string-array name="descriptions">
+        <item>Message sent 2 minutes ago</item>
+        <item>Message sent at 9:30am</item>
+        <item>Message sent 2 days ago</item>
+        <item>Message sent 1 week ago</item>
+    </string-array>
+
 </resources>
