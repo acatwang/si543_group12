@@ -3,19 +3,42 @@ package com.example.user.connectmentor;
 
 import android.app.Activity;
 import android.app.FragmentManager;
+import android.content.Context;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
+import android.text.Layout;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.ImageView;
+import android.widget.ListView;
+import android.widget.TextView;
 
 
 public class MessageInbox extends Activity {
+
+    ListView list;
+    String[] userTitles;
+    String[] userDescriptions;
+    int[] images = {R.drawable.user1,R.drawable.user2,R.drawable.user3,R.drawable.user4};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_message_inbox);
+
+        Resources res=getResources();
+        userTitles=res.getStringArray(R.array.titles);
+        userDescriptions=res.getStringArray(R.array.descriptions);
+
+        list= (ListView) findViewById(R.id.listView);
+        ConnectMentorAdapter adapter=new ConnectMentorAdapter(this,userTitles,images,userDescriptions);
+        list.setAdapter(adapter);
+
     }
 
 
@@ -64,7 +87,39 @@ public class MessageInbox extends Activity {
         return super.onOptionsItemSelected(item);
     }}
 
+class ConnectMentorAdapter extends ArrayAdapter<String>
+{
+    Context context;
+    int [] images;
+    String[] titleArray;
+    String [] descriptionArray;
+    ConnectMentorAdapter(Context c,String[] titles, int imgs[], String [] desc)
+    {
+        super(c,R.layout.single_row,R.id.textView,titles);
+        this.context=c;
+        this.images=imgs;
+        this.titleArray=titles;
+        this.descriptionArray=desc;
 
+    }
+
+    @Override
+    public View getView (int position, View convertView, ViewGroup parent) {
+        LayoutInflater inflater= (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        View row=inflater.inflate(R.layout.single_row,parent, false);
+
+        ImageView myImage= (ImageView) row.findViewById(R.id.imageView);
+        TextView myTitle= (TextView) row.findViewById(R.id.textView);
+        TextView myDescription= (TextView) row.findViewById(R.id.textView2);
+
+        myImage.setImageResource(images[position]);
+        myTitle.setText(titleArray[position]);
+        myDescription.setText(descriptionArray[position]);
+
+
+        return row;
+    }
+}
 
 
 
