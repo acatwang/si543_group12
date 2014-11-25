@@ -85,7 +85,18 @@
             android:text="Let's talk"
             android:layout_gravity="center_horizontal"
             android:onClick="startConversation"/>
+
+        <Button
+            android:id="@+id/btnEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit Profile"
+            android:layout_gravity="center_horizontal"
+            android:onClick="editProfile"/>
     </LinearLayout>
+
+
+
     <ExpandableListView
         android:id="@+id/lvExp"
         android:layout_height="match_parent"

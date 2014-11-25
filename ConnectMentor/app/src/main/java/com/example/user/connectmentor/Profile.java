@@ -7,6 +7,7 @@ import android.app.FragmentManager;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -36,11 +37,12 @@ public class Profile extends Activity {
     List<String> listDataHeader;
     HashMap<String, List<String>> listDataChild;
     ArrayList <HashMap<String, String>> usersList = new ArrayList <HashMap<String, String>>();
-
-    public final static String EXTRA_MESSAGE = "edu.umich.teamivore.MESSAGE";
-
+    String user;
+    int userid;
 
     /* SharedPreference*/
+    public final static String EXTRA_MESSAGE = "edu.umich.teamivore.MESSAGE";
+    ArrayList <HashMap<String, String>> recordsList = new ArrayList <HashMap<String, String>>();
     static final String KEY_NAME = "name";
     static final String KEY_MAJOR = "major";
     public static final String LOGIN_PREFS = "Login_Prefs" ;
@@ -61,32 +63,38 @@ public class Profile extends Activity {
         initUserList();
 
         Intent intent = getIntent();
-        String message = intent.getStringExtra(OverViewActivity.EXTRA_MESSAGE);
+        try {
+            user = intent.getStringExtra(OverViewActivity.EXTRA_MESSAGE);
+            userid = (int) Long.parseLong(user);
+        }catch (RuntimeException e){
+            userid = 9999;
+        }
 
-        int id = (int) Long.parseLong(message);
+
         /* Create the text view*/
 
         //show ID for debug use
         TextView textViewID = (TextView) findViewById(R.id.textView_userid);
-        textViewID.setText("User ID: "+ id);
+        textViewID.setText("User ID: "+ userid);
 
-        // Programatically Set User Name
+        // TODO: rogramatically Set User Name
         TextView textView = (TextView) findViewById(R.id.textView_username);
         Button talkButton =  (Button) findViewById(R.id.btnTalk);
         Button changeButton = (Button) findViewById(R.id.btnChangeImage);
-        if (id ==9999){ // Current User
-            //TODO:Get username from SharedPrefernce
+        if (userid ==9999){ // Current User
+            //Get username from SharedPrefernce
             SharedPreferences loginsharedpref = getSharedPreferences(LOGIN_PREFS,Activity.MODE_PRIVATE);
             SharedPreferences sessionpref = getSharedPreferences(SESSION_PREFS,Activity.MODE_PRIVATE);
             String user = sessionpref.getString("Login","");
 
+            //Show content
             textView.setText(user);
             talkButton.setVisibility(View.GONE);
         } else{ // The user is viewing other member's profile
             textView.setText("Otheruser");
+            //textView.setText(recordsList.get(userid).getName());
 
             // Show let's talk button and hide change image button
-            talkButton.setVisibility(1);
             changeButton.setVisibility(View.GONE);
 
         }
@@ -106,6 +114,8 @@ public class Profile extends Activity {
     }
 
     private void initUserList(){
+
+
         usersList.add(createMember("Andy", "IOE"));
         usersList.add(createMember("Katharina", "SI"));
         usersList.add(createMember("Kurt", "CS"));
@@ -227,6 +237,17 @@ public class Profile extends Activity {
     public void startConversation(View view){
         Intent talkIntent = new Intent(this, MessageInbox.class);
         startActivity(talkIntent);
+    }
+
+    public void editProfile(View view){
+        Intent editIntent = new Intent(this, EditProfile.class);
+        SharedPreferences loginsharedpref = getSharedPreferences(LOGIN_PREFS,Activity.MODE_PRIVATE);
+        SharedPreferences sessionpref = getSharedPreferences(SESSION_PREFS,Activity.MODE_PRIVATE);
+        String user = sessionpref.getString("Login","");
+
+        editIntent.putExtra("name",user);
+
+        startActivity(editIntent);
     }
 }
 

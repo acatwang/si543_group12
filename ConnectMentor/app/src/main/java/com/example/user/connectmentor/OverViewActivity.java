@@ -116,7 +116,7 @@ public class OverViewActivity extends Activity {
         Map<String, ?> allEntries = loginsharedpref.getAll();
         for (Map.Entry<String, ?> entry : allEntries.entrySet()) {
             if (!entry.getKey().toString().equals(user)) {
-                recordsList.add(createMember(entry.getKey().toString(), entry.getValue().toString().split(":")[1]));
+                recordsList.add(createMember(entry.getKey().toString(), entry.getValue().toString().split(":")[1])); //major
             }
         }
 
