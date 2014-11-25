@@ -87,6 +87,9 @@ public class OverViewActivity extends Activity {
         }
         if (id == R.id.action_profile) {
             Intent ProfileIntent = new Intent(this, Profile.class);
+            //Sent id to indicate this is current user
+            String message = String.valueOf("9999");
+            ProfileIntent.putExtra(EXTRA_MESSAGE, message);
             startActivity(ProfileIntent);
         }
         if (id == R.id.action_message) {

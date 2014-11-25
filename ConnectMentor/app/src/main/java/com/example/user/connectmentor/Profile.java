@@ -34,6 +34,9 @@ public class Profile extends Activity {
     HashMap<String, List<String>> listDataChild;
     ArrayList <HashMap<String, String>> usersList = new ArrayList <HashMap<String, String>>();
 
+    public final static String EXTRA_MESSAGE = "edu.umich.teamivore.MESSAGE";
+
+
     /* SharedPreference*/
     static final String KEY_NAME = "name";
     static final String KEY_MAJOR = "major";
@@ -53,20 +56,22 @@ public class Profile extends Activity {
         // Get the message from the intent
 
         initUserList();
- /*
+
         Intent intent = getIntent();
         String message = intent.getStringExtra(OverViewActivity.EXTRA_MESSAGE);
 
         int id = (int) Long.parseLong(message);
         //Create the text view
+
         TextView textViewID = (TextView) findViewById(R.id.textView_userid);
         textViewID.setText("User ID: "+ id);
-        */
+
         TextView textView = (TextView) findViewById(R.id.textView_username);
         //TODO:Get username from SharedPrefernce
         SharedPreferences loginsharedpref = getSharedPreferences(LOGIN_PREFS,Activity.MODE_PRIVATE);
         SharedPreferences sessionpref = getSharedPreferences(SESSION_PREFS,Activity.MODE_PRIVATE);
         String user = sessionpref.getString("Login","");
+
         textView.setText(user);
 
         // get the listview
@@ -119,11 +124,16 @@ public class Profile extends Activity {
                 startActivity(goOvreviewIntent);
                 break;
             case  R.id.action_profile:
+                // TODO Get current user name
+
                 Intent goProfileIntent = new Intent(this, Profile.class);
+                String message = String.valueOf("9999");
+                goProfileIntent.putExtra(EXTRA_MESSAGE, message);
                 startActivity(goProfileIntent);
                 break;
             case R.id.action_message:
                 Intent goMessageIntent = new Intent(this, MessageInbox.class);
+
                 startActivity(goMessageIntent);
                 break;
             case R.id.action_settings:
