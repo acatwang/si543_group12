@@ -19,6 +19,7 @@ import android.widget.ExpandableListView.OnChildClickListener;
 import android.widget.ExpandableListView.OnGroupClickListener;
 import android.widget.ExpandableListView.OnGroupCollapseListener;
 import android.widget.ExpandableListView.OnGroupExpandListener;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import java.util.ArrayList;
@@ -26,6 +27,8 @@ import java.util.HashMap;
 import java.util.List;
 
 public class Profile extends Activity {
+
+    private LinearLayout talkLayout;
     Button button;
     ImageView image;
     ExpandableListAdapter listAdapter;
@@ -61,18 +64,33 @@ public class Profile extends Activity {
         String message = intent.getStringExtra(OverViewActivity.EXTRA_MESSAGE);
 
         int id = (int) Long.parseLong(message);
-        //Create the text view
+        /* Create the text view*/
 
+        //show ID for debug use
         TextView textViewID = (TextView) findViewById(R.id.textView_userid);
         textViewID.setText("User ID: "+ id);
 
+        // Programatically Set User Name
         TextView textView = (TextView) findViewById(R.id.textView_username);
-        //TODO:Get username from SharedPrefernce
-        SharedPreferences loginsharedpref = getSharedPreferences(LOGIN_PREFS,Activity.MODE_PRIVATE);
-        SharedPreferences sessionpref = getSharedPreferences(SESSION_PREFS,Activity.MODE_PRIVATE);
-        String user = sessionpref.getString("Login","");
+        Button talkButton =  (Button) findViewById(R.id.btnTalk);
+        Button changeButton = (Button) findViewById(R.id.btnChangeImage);
+        if (id ==9999){ // Current User
+            //TODO:Get username from SharedPrefernce
+            SharedPreferences loginsharedpref = getSharedPreferences(LOGIN_PREFS,Activity.MODE_PRIVATE);
+            SharedPreferences sessionpref = getSharedPreferences(SESSION_PREFS,Activity.MODE_PRIVATE);
+            String user = sessionpref.getString("Login","");
 
-        textView.setText(user);
+            textView.setText(user);
+            talkButton.setVisibility(View.GONE);
+        } else{ // The user is viewing other member's profile
+            textView.setText("Otheruser");
+
+            // Show let's talk button and hide change image button
+            talkButton.setVisibility(1);
+            changeButton.setVisibility(View.GONE);
+
+        }
+
 
         // get the listview
         expListView = (ExpandableListView) findViewById(R.id.lvExp);

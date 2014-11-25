@@ -32,14 +32,21 @@
 
     </LinearLayout>
 
-
-    <Button
-        android:id="@+id/btnChangeImage"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Change Image"
-        android:layout_gravity="center_horizontal" />
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/linearLayoutEdit">
 
+        <Button
+            android:id="@+id/btnChangeImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Change Image"
+            android:layout_gravity="center_horizontal" />
+
+
+    </LinearLayout>
     <TextView
         android:id="@+id/textView_userid"
         android:layout_width="wrap_content"
@@ -66,13 +73,19 @@
         android:text="@string/user_year"
         android:textSize="20sp"
         android:layout_gravity="center_horizontal"/>
-    <Button
-        android:id="@+id/btnTalk"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Let's talk"
         android:layout_gravity="center_horizontal"
-        android:onClick="startConversation"/>
+        android:id="@+id/linearLayoutTalk">
+        <Button
+            android:id="@+id/btnTalk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Let's talk"
+            android:layout_gravity="center_horizontal"
+            android:onClick="startConversation"/>
+    </LinearLayout>
     <ExpandableListView
         android:id="@+id/lvExp"
         android:layout_height="match_parent"
