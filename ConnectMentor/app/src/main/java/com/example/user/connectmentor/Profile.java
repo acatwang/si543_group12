@@ -5,6 +5,7 @@ import android.app.ActionBar;
 import android.app.Activity;
 import android.app.FragmentManager;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -24,8 +25,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-
-
 public class Profile extends Activity {
     Button button;
     ImageView image;
@@ -34,13 +33,17 @@ public class Profile extends Activity {
     List<String> listDataHeader;
     HashMap<String, List<String>> listDataChild;
     ArrayList <HashMap<String, String>> usersList = new ArrayList <HashMap<String, String>>();
+
+    /* SharedPreference*/
     static final String KEY_NAME = "name";
     static final String KEY_MAJOR = "major";
+    public static final String LOGIN_PREFS = "Login_Prefs" ;
+    public static final String SESSION_PREFS = "Session_Prefs" ;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
-
 
         //enable the action bar
         ActionBar actionBar = getActionBar();
@@ -50,21 +53,21 @@ public class Profile extends Activity {
         // Get the message from the intent
 
         initUserList();
-
-
+ /*
         Intent intent = getIntent();
         String message = intent.getStringExtra(OverViewActivity.EXTRA_MESSAGE);
 
         int id = (int) Long.parseLong(message);
-        // Create the text view
+        //Create the text view
         TextView textViewID = (TextView) findViewById(R.id.textView_userid);
         textViewID.setText("User ID: "+ id);
-
+        */
         TextView textView = (TextView) findViewById(R.id.textView_username);
-        // TODO: get user information from DB using user ID instead of typing
-        textView.setText("Andy");
-
-
+        //TODO:Get username from SharedPrefernce
+        SharedPreferences loginsharedpref = getSharedPreferences(LOGIN_PREFS,Activity.MODE_PRIVATE);
+        SharedPreferences sessionpref = getSharedPreferences(SESSION_PREFS,Activity.MODE_PRIVATE);
+        String user = sessionpref.getString("Login","");
+        textView.setText(user);
 
         // get the listview
         expListView = (ExpandableListView) findViewById(R.id.lvExp);
@@ -81,7 +84,7 @@ public class Profile extends Activity {
 
     private void initUserList(){
         usersList.add(createMember("Andy", "IOE"));
-        usersList.add(createMember("Anthony", "EE"));
+        usersList.add(createMember("Katharina", "SI"));
         usersList.add(createMember("Kurt", "CS"));
         usersList.add(createMember("Kush", "SI"));
         usersList.add(createMember("Alison", "SI"));
@@ -103,6 +106,7 @@ public class Profile extends Activity {
         return true;
     }
 
+    /* Set up menu bar at the bottom */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -152,8 +156,6 @@ public class Profile extends Activity {
         });
     }
 
-
-
     // Programatically set data
     private void prepareListData(){
         listDataHeader = new ArrayList<String>();
@@ -167,7 +169,7 @@ public class Profile extends Activity {
         // Adding child(Content) data
         List<String> aboutme = new ArrayList<String>();
         // for now we add mock-up information. The content can be get from DB using function getUserInfo(userid)
-        aboutme.add("Hi I am andy");
+        aboutme.add("Hi I am Katharina");
 
         /* Add Coursework*/
         List<String> coursework = new ArrayList<String>();
