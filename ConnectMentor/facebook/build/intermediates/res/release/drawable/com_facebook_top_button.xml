@@ -25,8 +25,4 @@
     <item
             android:drawable="@drawable/com_facebook_top_background" />
 </selector>
-<<<<<<< HEAD
-<!-- From: file:/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable/com_facebook_top_button.xml -->
-=======
-<!-- From: file:/C:/Users/user/Documents/GitHub/si543_group12/ConnectMentor/facebook/res/drawable/com_facebook_top_button.xml -->
->>>>>>> FETCH_HEAD
+<!-- From: file:/C:/Users/Kushank/Documents/GitHub/si543_group12/ConnectMentor/facebook/res/drawable/com_facebook_top_button.xml -->

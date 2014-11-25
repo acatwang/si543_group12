@@ -88,8 +88,4 @@
             android:background="@drawable/com_facebook_picker_default_separator_color"
             />
 </RelativeLayout>
-<<<<<<< HEAD
-<!-- From: file:/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/layout/com_facebook_placepickerfragment_list_row.xml -->
-=======
-<!-- From: file:/C:/Users/user/Documents/GitHub/si543_group12/ConnectMentor/facebook/res/layout/com_facebook_placepickerfragment_list_row.xml -->
->>>>>>> FETCH_HEAD
+<!-- From: file:/C:/Users/Kushank/Documents/GitHub/si543_group12/ConnectMentor/facebook/res/layout/com_facebook_placepickerfragment_list_row.xml -->

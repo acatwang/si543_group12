@@ -18,8 +18,4 @@
     <item android:drawable="@drawable/com_facebook_picker_list_pressed"  />
     <item android:drawable="@drawable/com_facebook_picker_list_longpressed"  />
 </transition>
-<<<<<<< HEAD
-<!-- From: file:/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable/com_facebook_picker_list_selector_background_transition.xml -->
-=======
-<!-- From: file:/C:/Users/user/Documents/GitHub/si543_group12/ConnectMentor/facebook/res/drawable/com_facebook_picker_list_selector_background_transition.xml -->
->>>>>>> FETCH_HEAD
+<!-- From: file:/C:/Users/Kushank/Documents/GitHub/si543_group12/ConnectMentor/facebook/res/drawable/com_facebook_picker_list_selector_background_transition.xml -->
