@@ -41,6 +41,7 @@ public class Profile extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
+
         //enable the action bar
         ActionBar actionBar = getActionBar();
 

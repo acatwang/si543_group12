@@ -17,7 +17,8 @@ import com.facebook.model.*;
 
 public class UserLoginActivity extends Activity {
     public final static String EXTRA_MESSAGE = "edu.umich.teamivore.MESSAGE";
-    public static final String LOGIN_PREFS = "Login_Pref" ;
+    public static final String LOGIN_PREFS = "Login_Prefs" ;
+    public static final String SESSION_PREFS = "Session_Prefs" ;
     public static final String name = "nameKey";
     public static final String pass = "passwordKey";
 
@@ -25,6 +26,16 @@ public class UserLoginActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_login);
+        //Remove Login key at beginning of Login Screen
+        SharedPreferences sessionpref = getSharedPreferences(SESSION_PREFS,Activity.MODE_PRIVATE);
+        SharedPreferences.Editor seditor = sessionpref.edit();
+        if (sessionpref.contains("Login"))
+        {
+            seditor.remove("Login");
+            seditor.commit();
+        }
+
+
 
     }
 
@@ -71,44 +82,69 @@ public class UserLoginActivity extends Activity {
         //Get Shared Preferences object
         SharedPreferences loginsharedpref = getSharedPreferences(LOGIN_PREFS,Activity.MODE_PRIVATE);
         SharedPreferences.Editor editor = loginsharedpref.edit();
+        //Shared Preferences for Login Session
+        SharedPreferences sessionpref = getSharedPreferences(SESSION_PREFS,Activity.MODE_PRIVATE);
+        SharedPreferences.Editor seditor = sessionpref.edit();
         Intent intent = new Intent(this,OverViewActivity.class);
         // To send the username to next view and login/signup, get its value from the user name text box
         // Retrieve the password from the password text box
+        // Retrieve major from major text box
         EditText username = (EditText)findViewById(R.id.editText);
         EditText password = (EditText)findViewById(R.id.editText2);
+        EditText major = (EditText)findViewById(R.id.editText3);
         String u = username.getText().toString();
         String p = password.getText().toString();
-        //Check if the username already exists in shared preferences file
-        //Retrieve corresponding password
-        //if retrieved password == password
-        // Login the user,use Intent to switch to next Activity -> OverView Activity
-        //if retrieved password != password
-        // Show Wrong password
-        if (loginsharedpref.contains(u)) {
-            if(loginsharedpref.getString(u,null).equals(p))
-            {
-                // Send the string using Intent
+        String m = major.getText().toString();
+        String j = p + ":" + m;
+
+        if (u.equalsIgnoreCase("")) {
+            username.setHint("Please enter username");
+        }
+        if (p.equalsIgnoreCase("")) {
+            password.setHint("Please enter password");
+        }
+        if (m.equalsIgnoreCase("")) {
+            major.setHint("Please enter major");
+        }
+
+        if (!u.isEmpty() && !p.isEmpty() && !m.isEmpty()) {
+
+
+            //Check if the username already exists in shared preferences file
+            //Retrieve corresponding password and major
+            //if retrieved password and major == password and major
+            // Login the user,use Intent to switch to next Activity -> OverView Activity
+            //if retrieved password and/or major != password and/or major
+            // Show Wrong password or Major
+            if (loginsharedpref.contains(u)) {
+                if (loginsharedpref.getString(u, null).equals(j)) {
+
+                    seditor.putString("Login",u);
+                    seditor.apply();
+                    // Send the string using Intent
+                    intent.putExtra(EXTRA_MESSAGE, u);
+                    startActivity(intent);
+
+                } else {
+                    TextView wrongwdlabel = (TextView) findViewById(R.id.textView2);
+                    wrongwdlabel.setText("Wrong Password or Major");
+                }
+
+            }
+            //if the username does not exist
+            // insert username in shared preferences
+            //insert password and major in shared preferences
+            // insert session information in shared preferences
+            else {
+                editor.putString(u, j);
+                editor.apply();
+                seditor.putString("Login",u);
+                seditor.apply();
+                // Send the username string using Intent
                 intent.putExtra(EXTRA_MESSAGE, u);
                 startActivity(intent);
 
             }
-            else {
-                TextView wrongwdlabel = (TextView) findViewById(R.id.textView2);
-                wrongwdlabel.setText("Wrong Password");
-            }
-
-        }
-        //if the username does not exist
-        // insert username in shared preferences
-        //insert password in shared preferences
-        else
-        {
-            editor.putString(u,p);
-            editor.apply();
-            // Send the username string using Intent
-            intent.putExtra(EXTRA_MESSAGE,u);
-            startActivity(intent);
-
         }
 
 

@@ -4,6 +4,7 @@ package com.example.user.connectmentor;
 import android.app.ActionBar;
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -30,19 +31,21 @@ public class OverViewActivity extends Activity {
     ArrayList <HashMap<String, String>> recordsList = new ArrayList <HashMap<String, String>>();
     static final String KEY_NAME = "name";
     static final String KEY_MAJOR = "major";
+    public static final String LOGIN_PREFS = "Login_Prefs" ;
+    public static final String SESSION_PREFS = "Session_Prefs" ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_over_view);
-        /*Source:https://github.com/aboudalia/Teamivore/blob/master/app/src/main/java/edu/umich/teamivore/TeamDetailActivity.java*/
-        // Receiving Message from the User Login Activity - User Name
-        Intent intent = getIntent();
-        String messagestring = intent.getStringExtra(UserLoginActivity.EXTRA_MESSAGE);
+        //Getting current logged in username from session shared preferences
         //Setting title of Action bar with user name entered in login page
-        if (messagestring != null) {
-            if(!messagestring.isEmpty()) {
-                getActionBar().setTitle("User List for " + messagestring);
+        SharedPreferences loginsharedpref = getSharedPreferences(LOGIN_PREFS,Activity.MODE_PRIVATE);
+        SharedPreferences sessionpref = getSharedPreferences(SESSION_PREFS,Activity.MODE_PRIVATE);
+        String user = sessionpref.getString("Login","");
+        if (user != null) {
+            if(!user.isEmpty()) {
+                getActionBar().setTitle("User List - " + user);
             }
         }
 
@@ -103,19 +106,18 @@ public class OverViewActivity extends Activity {
     /*Source:https://github.com/aboudalia/Teamivore/blob/master/Teamivore/app/src/main/java/edu/umich/teamivore/OverviewActivity.java*/
     private void initializelist()
     {
-        //Demo data
-        recordsList.add(createMember("Andy", "IOE"));
-        recordsList.add(createMember("Anthony", "EE"));
-        recordsList.add(createMember("Kurt", "CS"));
-        recordsList.add(createMember("Kush", "SI"));
-        recordsList.add(createMember("Alison", "SI"));
-        recordsList.add(createMember("Erica", "SI"));
+        //Get names and major stored in shared preferences and display them (Except current user)
+        SharedPreferences loginsharedpref = getSharedPreferences(LOGIN_PREFS,Activity.MODE_PRIVATE);
+        SharedPreferences sessionpref = getSharedPreferences(SESSION_PREFS,Activity.MODE_PRIVATE);
+        String user = sessionpref.getString("Login","");
+        Map<String, ?> allEntries = loginsharedpref.getAll();
+        for (Map.Entry<String, ?> entry : allEntries.entrySet()) {
+            if (!entry.getKey().toString().equals(user)) {
+                recordsList.add(createMember(entry.getKey().toString(), entry.getValue().toString().split(":")[1]));
+            }
+        }
 
-        //This function will retrieve records from database
-        // Make connection to DB
-        // Retrieve values of a column from table using Select statement
-        // loop through values
-         //memberlist.add(createMember("member", value));
+
 
     }
     /*Source:https://github.com/aboudalia/Teamivore/blob/master/Teamivore/app/src/main/java/edu/umich/teamivore/OverviewActivity.java*/
