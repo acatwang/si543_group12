@@ -2,6 +2,8 @@
 package com.example.user.connectmentor;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -9,10 +11,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.content.Intent;
 import com.facebook.*;
 import com.facebook.model.*;
+import com.google.android.gms.common.SignInButton;
 
 
 public class UserLoginActivity extends Activity {
@@ -34,6 +38,7 @@ public class UserLoginActivity extends Activity {
             seditor.remove("Login");
             seditor.commit();
         }
+
 
 
 
@@ -59,20 +64,12 @@ public class UserLoginActivity extends Activity {
         return super.onOptionsItemSelected(item);
     }
     public void loginfb(View view) {
-         //start Facebook Authentication
-         //check for authentication state changes
-         //result of authentication
-         //if result == success
-           // Login user, use Intent to switch to next Activity -> OverView Activity
+
+
 
 
     }
     public void logingoogle(View view) {
-        //start Google Authentication
-        //check for authentication state changes
-        //retrieve result of authentication
-        //if result == success
-          // Login user, use Intent to switch to next Activity -> OverView Activity
 
 
     }

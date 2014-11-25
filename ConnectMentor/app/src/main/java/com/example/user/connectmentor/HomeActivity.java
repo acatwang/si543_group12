@@ -43,10 +43,5 @@ public class HomeActivity extends Activity {
 
     }
 
-    public void register(View view)
-    {
-        Intent intent = new Intent(this,UserLoginActivity.class);
-        startActivity(intent);
 
-    }
 }

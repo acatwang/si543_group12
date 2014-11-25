@@ -19,19 +19,10 @@
         style="?android:attr/buttonStyleSmall"
         android:layout_width="151dp"
         android:layout_height="wrap_content"
-        android:text="Login"
+        android:text="Login/Register"
         android:id="@+id/login_button"
         android:layout_gravity="center_horizontal"
         android:layout_weight="0.05"
         android:onClick="login" />
 
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="151dp"
-        android:layout_height="wrap_content"
-        android:text="Register"
-        android:id="@+id/register_button"
-        android:layout_gravity="center_horizontal"
-        android:layout_weight="0.05"
-        android:onClick="register" />
 </LinearLayout>
