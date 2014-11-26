@@ -58,7 +58,8 @@ public class OverViewActivity extends Activity {
         memberListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parentAdapter, View view, int position,
                                     long id) {
-                openMemberDetail(id);
+                String listname = parentAdapter.getItemAtPosition(position).toString();
+                openMemberDetail(listname);
             }
         });
     }
@@ -109,6 +110,12 @@ public class OverViewActivity extends Activity {
     /*Source:https://github.com/aboudalia/Teamivore/blob/master/Teamivore/app/src/main/java/edu/umich/teamivore/OverviewActivity.java*/
     private void initializelist()
     {
+        //Demo data
+        recordsList.add(createMember("Colin","IOE"));
+        recordsList.add(createMember("Mike","SI"));
+        recordsList.add(createMember("Kathryn","SI"));
+        recordsList.add(createMember("Amber","SI"));
+        recordsList.add(createMember("Uday","EE"));
         //Get names and major stored in shared preferences and display them (Except current user)
         SharedPreferences loginsharedpref = getSharedPreferences(LOGIN_PREFS,Activity.MODE_PRIVATE);
         SharedPreferences sessionpref = getSharedPreferences(SESSION_PREFS,Activity.MODE_PRIVATE);
@@ -132,9 +139,10 @@ public class OverViewActivity extends Activity {
         return team;
     }
     /*Source:https://github.com/aboudalia/Teamivore/blob/master/Teamivore/app/src/main/java/edu/umich/teamivore/OverviewActivity.java*/
-    public void openMemberDetail(long id) {
+    public void openMemberDetail(String list_name) {
         Intent intent = new Intent(this, Profile.class);
-        String message = String.valueOf(id);
+        //String message = String.valueOf(id);
+        String message = list_name;
         intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);
     }

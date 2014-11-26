@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+<<<<<<< HEAD
     <!-- From: file:/C:/Users/user/Documents/GitHub/si543_group12/ConnectMentor/facebook/res/values-es/strings.xml -->
+=======
+    <!-- From: file:/C:/Users/Kushank/Documents/GitHub/si543_group12/ConnectMentor/facebook/res/values-es/strings.xml -->
+>>>>>>> origin/master
     <eat-comment />
 
     <string name="com_facebook_choose_friends">Elige Amigos</string>

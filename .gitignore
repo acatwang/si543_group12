@@ -90,3 +90,8 @@ proguard/
 *.ipr
 *.iws
 .idea/
+ConnectMentor/facebook/build/intermediates/bundles/release/res/values-iw/values.xml
+ConnectMentor/facebook/build/intermediates/bundles/release/classes.jar
+ConnectMentor/facebook/build/intermediates/bundles/release/res/values/values.xml
+*.xml
+ConnectMentor/facebook/build/intermediates/bundles/release/res/values-iw/values.xml
