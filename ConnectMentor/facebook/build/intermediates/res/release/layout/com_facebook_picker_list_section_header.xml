@@ -32,8 +32,4 @@
     android:shadowDy="1"
     android:shadowRadius="1"
     android:shadowColor="#BFFFFFFF" />
-<<<<<<< HEAD
-<!-- From: file:/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/layout/com_facebook_picker_list_section_header.xml -->
-=======
 <!-- From: file:/C:/Users/user/Documents/GitHub/si543_group12/ConnectMentor/facebook/res/layout/com_facebook_picker_list_section_header.xml -->
->>>>>>> FETCH_HEAD

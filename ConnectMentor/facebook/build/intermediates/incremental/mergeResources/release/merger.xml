@@ -2,15 +2,6 @@
 <merger version="2" >
 
     <dataSet config="20.0.0" >
-<<<<<<< HEAD
-        <source path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/build/intermediates/exploded-aar/com.android.support/support-v4/20.0.0/res" />
-    </dataSet>
-    <dataSet config="main" >
-        <source path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res" >
-            <file
-                name="com_facebook_button_blue"
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable/com_facebook_button_blue.xml"
-=======
         <source path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\build\intermediates\exploded-aar\com.android.support\support-v4\20.0.0\res" />
     </dataSet>
     <dataSet config="main" >
@@ -18,1068 +9,595 @@
             <file
                 name="com_facebook_button_blue"
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable\com_facebook_button_blue.xml"
->>>>>>> FETCH_HEAD
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_button_blue_focused"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable/com_facebook_button_blue_focused.9.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable\com_facebook_button_blue_focused.9.png"
->>>>>>> FETCH_HEAD
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_button_blue_normal"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable/com_facebook_button_blue_normal.9.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable\com_facebook_button_blue_normal.9.png"
->>>>>>> FETCH_HEAD
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_button_blue_pressed"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable/com_facebook_button_blue_pressed.9.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable\com_facebook_button_blue_pressed.9.png"
->>>>>>> FETCH_HEAD
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_button_check"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable/com_facebook_button_check.xml"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable\com_facebook_button_check.xml"
->>>>>>> FETCH_HEAD
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_button_check_off"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable/com_facebook_button_check_off.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable\com_facebook_button_check_off.png"
->>>>>>> FETCH_HEAD
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_button_check_on"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable/com_facebook_button_check_on.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable\com_facebook_button_check_on.png"
->>>>>>> FETCH_HEAD
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_button_grey_focused"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable/com_facebook_button_grey_focused.9.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable\com_facebook_button_grey_focused.9.png"
->>>>>>> FETCH_HEAD
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_button_grey_normal"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable/com_facebook_button_grey_normal.9.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable\com_facebook_button_grey_normal.9.png"
->>>>>>> FETCH_HEAD
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_button_grey_pressed"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable/com_facebook_button_grey_pressed.9.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable\com_facebook_button_grey_pressed.9.png"
->>>>>>> FETCH_HEAD
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_button_like"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable/com_facebook_button_like.xml"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable\com_facebook_button_like.xml"
->>>>>>> FETCH_HEAD
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_button_like_background"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable/com_facebook_button_like_background.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable\com_facebook_button_like_background.png"
->>>>>>> FETCH_HEAD
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_button_like_background_selected"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable/com_facebook_button_like_background_selected.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable\com_facebook_button_like_background_selected.png"
->>>>>>> FETCH_HEAD
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_button_like_icon"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable/com_facebook_button_like_icon.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable\com_facebook_button_like_icon.png"
->>>>>>> FETCH_HEAD
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_button_like_icon_selected"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable/com_facebook_button_like_icon_selected.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable\com_facebook_button_like_icon_selected.png"
->>>>>>> FETCH_HEAD
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_button_like_pressed"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable/com_facebook_button_like_pressed.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable\com_facebook_button_like_pressed.png"
->>>>>>> FETCH_HEAD
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_button_like_selected"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable/com_facebook_button_like_selected.xml"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable\com_facebook_button_like_selected.xml"
->>>>>>> FETCH_HEAD
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_close"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable/com_facebook_close.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable\com_facebook_close.png"
->>>>>>> FETCH_HEAD
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_inverse_icon"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable/com_facebook_inverse_icon.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable\com_facebook_inverse_icon.png"
->>>>>>> FETCH_HEAD
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_list_divider"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable/com_facebook_list_divider.9.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable\com_facebook_list_divider.9.png"
->>>>>>> FETCH_HEAD
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_list_section_header_background"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable/com_facebook_list_section_header_background.9.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable\com_facebook_list_section_header_background.9.png"
->>>>>>> FETCH_HEAD
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_loginbutton_silver"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable/com_facebook_loginbutton_silver.xml"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable\com_facebook_loginbutton_silver.xml"
->>>>>>> FETCH_HEAD
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_logo"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable/com_facebook_logo.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable\com_facebook_logo.png"
->>>>>>> FETCH_HEAD
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_picker_item_background"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable/com_facebook_picker_item_background.xml"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable\com_facebook_picker_item_background.xml"
->>>>>>> FETCH_HEAD
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_picker_list_focused"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable/com_facebook_picker_list_focused.9.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable\com_facebook_picker_list_focused.9.png"
->>>>>>> FETCH_HEAD
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_picker_list_longpressed"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable/com_facebook_picker_list_longpressed.9.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable\com_facebook_picker_list_longpressed.9.png"
->>>>>>> FETCH_HEAD
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_picker_list_pressed"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable/com_facebook_picker_list_pressed.9.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable\com_facebook_picker_list_pressed.9.png"
->>>>>>> FETCH_HEAD
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_picker_list_selector"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable/com_facebook_picker_list_selector.xml"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable\com_facebook_picker_list_selector.xml"
->>>>>>> FETCH_HEAD
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_picker_list_selector_background_transition"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable/com_facebook_picker_list_selector_background_transition.xml"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable\com_facebook_picker_list_selector_background_transition.xml"
->>>>>>> FETCH_HEAD
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_picker_list_selector_disabled"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable/com_facebook_picker_list_selector_disabled.9.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable\com_facebook_picker_list_selector_disabled.9.png"
->>>>>>> FETCH_HEAD
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_picker_top_button"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable/com_facebook_picker_top_button.xml"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable\com_facebook_picker_top_button.xml"
->>>>>>> FETCH_HEAD
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_place_default_icon"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable/com_facebook_place_default_icon.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable\com_facebook_place_default_icon.png"
->>>>>>> FETCH_HEAD
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_profile_default_icon"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable/com_facebook_profile_default_icon.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable\com_facebook_profile_default_icon.png"
->>>>>>> FETCH_HEAD
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_profile_picture_blank_portrait"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable/com_facebook_profile_picture_blank_portrait.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable\com_facebook_profile_picture_blank_portrait.png"
->>>>>>> FETCH_HEAD
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_profile_picture_blank_square"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable/com_facebook_profile_picture_blank_square.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable\com_facebook_profile_picture_blank_square.png"
->>>>>>> FETCH_HEAD
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_top_background"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable/com_facebook_top_background.xml"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable\com_facebook_top_background.xml"
->>>>>>> FETCH_HEAD
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_top_button"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable/com_facebook_top_button.xml"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable\com_facebook_top_button.xml"
->>>>>>> FETCH_HEAD
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_usersettingsfragment_background_gradient"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable/com_facebook_usersettingsfragment_background_gradient.xml"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable\com_facebook_usersettingsfragment_background_gradient.xml"
->>>>>>> FETCH_HEAD
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_button_blue_focused"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable-hdpi/com_facebook_button_blue_focused.9.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable-hdpi\com_facebook_button_blue_focused.9.png"
->>>>>>> FETCH_HEAD
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_button_blue_normal"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable-hdpi/com_facebook_button_blue_normal.9.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable-hdpi\com_facebook_button_blue_normal.9.png"
->>>>>>> FETCH_HEAD
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_button_blue_pressed"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable-hdpi/com_facebook_button_blue_pressed.9.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable-hdpi\com_facebook_button_blue_pressed.9.png"
->>>>>>> FETCH_HEAD
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_button_grey_focused"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable-hdpi/com_facebook_button_grey_focused.9.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable-hdpi\com_facebook_button_grey_focused.9.png"
->>>>>>> FETCH_HEAD
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_button_grey_normal"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable-hdpi/com_facebook_button_grey_normal.9.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable-hdpi\com_facebook_button_grey_normal.9.png"
->>>>>>> FETCH_HEAD
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_button_grey_pressed"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable-hdpi/com_facebook_button_grey_pressed.9.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable-hdpi\com_facebook_button_grey_pressed.9.png"
->>>>>>> FETCH_HEAD
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_button_like_background"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable-hdpi/com_facebook_button_like_background.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable-hdpi\com_facebook_button_like_background.png"
->>>>>>> FETCH_HEAD
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_button_like_background_selected"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable-hdpi/com_facebook_button_like_background_selected.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable-hdpi\com_facebook_button_like_background_selected.png"
->>>>>>> FETCH_HEAD
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_button_like_icon"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable-hdpi/com_facebook_button_like_icon.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable-hdpi\com_facebook_button_like_icon.png"
->>>>>>> FETCH_HEAD
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_button_like_icon_selected"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable-hdpi/com_facebook_button_like_icon_selected.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable-hdpi\com_facebook_button_like_icon_selected.png"
->>>>>>> FETCH_HEAD
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_button_like_pressed"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable-hdpi/com_facebook_button_like_pressed.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable-hdpi\com_facebook_button_like_pressed.png"
->>>>>>> FETCH_HEAD
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_close"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable-hdpi/com_facebook_close.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable-hdpi\com_facebook_close.png"
->>>>>>> FETCH_HEAD
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_inverse_icon"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable-hdpi/com_facebook_inverse_icon.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable-hdpi\com_facebook_inverse_icon.png"
->>>>>>> FETCH_HEAD
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_logo"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable-hdpi/com_facebook_logo.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable-hdpi\com_facebook_logo.png"
->>>>>>> FETCH_HEAD
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_picker_magnifier"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable-hdpi/com_facebook_picker_magnifier.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable-hdpi\com_facebook_picker_magnifier.png"
->>>>>>> FETCH_HEAD
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_tooltip_black_background"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable-hdpi/com_facebook_tooltip_black_background.9.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable-hdpi\com_facebook_tooltip_black_background.9.png"
->>>>>>> FETCH_HEAD
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_tooltip_black_bottomnub"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable-hdpi/com_facebook_tooltip_black_bottomnub.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable-hdpi\com_facebook_tooltip_black_bottomnub.png"
->>>>>>> FETCH_HEAD
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_tooltip_black_topnub"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable-hdpi/com_facebook_tooltip_black_topnub.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable-hdpi\com_facebook_tooltip_black_topnub.png"
->>>>>>> FETCH_HEAD
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_tooltip_black_xout"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable-hdpi/com_facebook_tooltip_black_xout.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable-hdpi\com_facebook_tooltip_black_xout.png"
->>>>>>> FETCH_HEAD
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_tooltip_blue_background"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable-hdpi/com_facebook_tooltip_blue_background.9.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable-hdpi\com_facebook_tooltip_blue_background.9.png"
->>>>>>> FETCH_HEAD
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_tooltip_blue_bottomnub"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable-hdpi/com_facebook_tooltip_blue_bottomnub.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable-hdpi\com_facebook_tooltip_blue_bottomnub.png"
->>>>>>> FETCH_HEAD
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_tooltip_blue_topnub"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable-hdpi/com_facebook_tooltip_blue_topnub.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable-hdpi\com_facebook_tooltip_blue_topnub.png"
->>>>>>> FETCH_HEAD
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_tooltip_blue_xout"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable-hdpi/com_facebook_tooltip_blue_xout.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable-hdpi\com_facebook_tooltip_blue_xout.png"
->>>>>>> FETCH_HEAD
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_close"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable-ldpi/com_facebook_close.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable-ldpi\com_facebook_close.png"
->>>>>>> FETCH_HEAD
                 qualifiers="ldpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_button_blue_focused"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable-mdpi/com_facebook_button_blue_focused.9.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable-mdpi\com_facebook_button_blue_focused.9.png"
->>>>>>> FETCH_HEAD
                 qualifiers="mdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_button_blue_normal"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable-mdpi/com_facebook_button_blue_normal.9.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable-mdpi\com_facebook_button_blue_normal.9.png"
->>>>>>> FETCH_HEAD
                 qualifiers="mdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_button_blue_pressed"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable-mdpi/com_facebook_button_blue_pressed.9.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable-mdpi\com_facebook_button_blue_pressed.9.png"
->>>>>>> FETCH_HEAD
                 qualifiers="mdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_inverse_icon"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable-mdpi/com_facebook_inverse_icon.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable-mdpi\com_facebook_inverse_icon.png"
->>>>>>> FETCH_HEAD
                 qualifiers="mdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_picker_magnifier"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable-mdpi/com_facebook_picker_magnifier.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable-mdpi\com_facebook_picker_magnifier.png"
->>>>>>> FETCH_HEAD
                 qualifiers="mdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_tooltip_black_background"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable-mdpi/com_facebook_tooltip_black_background.9.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable-mdpi\com_facebook_tooltip_black_background.9.png"
->>>>>>> FETCH_HEAD
                 qualifiers="mdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_tooltip_black_bottomnub"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable-mdpi/com_facebook_tooltip_black_bottomnub.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable-mdpi\com_facebook_tooltip_black_bottomnub.png"
->>>>>>> FETCH_HEAD
                 qualifiers="mdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_tooltip_black_topnub"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable-mdpi/com_facebook_tooltip_black_topnub.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable-mdpi\com_facebook_tooltip_black_topnub.png"
->>>>>>> FETCH_HEAD
                 qualifiers="mdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_tooltip_black_xout"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable-mdpi/com_facebook_tooltip_black_xout.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable-mdpi\com_facebook_tooltip_black_xout.png"
->>>>>>> FETCH_HEAD
                 qualifiers="mdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_tooltip_blue_background"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable-mdpi/com_facebook_tooltip_blue_background.9.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable-mdpi\com_facebook_tooltip_blue_background.9.png"
->>>>>>> FETCH_HEAD
                 qualifiers="mdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_tooltip_blue_bottomnub"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable-mdpi/com_facebook_tooltip_blue_bottomnub.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable-mdpi\com_facebook_tooltip_blue_bottomnub.png"
->>>>>>> FETCH_HEAD
                 qualifiers="mdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_tooltip_blue_topnub"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable-mdpi/com_facebook_tooltip_blue_topnub.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable-mdpi\com_facebook_tooltip_blue_topnub.png"
->>>>>>> FETCH_HEAD
                 qualifiers="mdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_tooltip_blue_xout"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable-mdpi/com_facebook_tooltip_blue_xout.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable-mdpi\com_facebook_tooltip_blue_xout.png"
->>>>>>> FETCH_HEAD
                 qualifiers="mdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_button_blue_focused"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable-xhdpi/com_facebook_button_blue_focused.9.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable-xhdpi\com_facebook_button_blue_focused.9.png"
->>>>>>> FETCH_HEAD
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_button_blue_normal"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable-xhdpi/com_facebook_button_blue_normal.9.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable-xhdpi\com_facebook_button_blue_normal.9.png"
->>>>>>> FETCH_HEAD
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_button_blue_pressed"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable-xhdpi/com_facebook_button_blue_pressed.9.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable-xhdpi\com_facebook_button_blue_pressed.9.png"
->>>>>>> FETCH_HEAD
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_button_grey_focused"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable-xhdpi/com_facebook_button_grey_focused.9.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable-xhdpi\com_facebook_button_grey_focused.9.png"
->>>>>>> FETCH_HEAD
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_button_grey_normal"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable-xhdpi/com_facebook_button_grey_normal.9.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable-xhdpi\com_facebook_button_grey_normal.9.png"
->>>>>>> FETCH_HEAD
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_button_grey_pressed"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable-xhdpi/com_facebook_button_grey_pressed.9.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable-xhdpi\com_facebook_button_grey_pressed.9.png"
->>>>>>> FETCH_HEAD
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_button_like_background"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable-xhdpi/com_facebook_button_like_background.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable-xhdpi\com_facebook_button_like_background.png"
->>>>>>> FETCH_HEAD
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_button_like_background_selected"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable-xhdpi/com_facebook_button_like_background_selected.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable-xhdpi\com_facebook_button_like_background_selected.png"
->>>>>>> FETCH_HEAD
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_button_like_icon"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable-xhdpi/com_facebook_button_like_icon.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable-xhdpi\com_facebook_button_like_icon.png"
->>>>>>> FETCH_HEAD
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_button_like_icon_selected"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable-xhdpi/com_facebook_button_like_icon_selected.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable-xhdpi\com_facebook_button_like_icon_selected.png"
->>>>>>> FETCH_HEAD
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_button_like_pressed"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable-xhdpi/com_facebook_button_like_pressed.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable-xhdpi\com_facebook_button_like_pressed.png"
->>>>>>> FETCH_HEAD
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_close"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable-xhdpi/com_facebook_close.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable-xhdpi\com_facebook_close.png"
->>>>>>> FETCH_HEAD
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_inverse_icon"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable-xhdpi/com_facebook_inverse_icon.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable-xhdpi\com_facebook_inverse_icon.png"
->>>>>>> FETCH_HEAD
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_logo"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable-xhdpi/com_facebook_logo.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable-xhdpi\com_facebook_logo.png"
->>>>>>> FETCH_HEAD
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_picker_magnifier"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable-xhdpi/com_facebook_picker_magnifier.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable-xhdpi\com_facebook_picker_magnifier.png"
->>>>>>> FETCH_HEAD
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_tooltip_black_background"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable-xhdpi/com_facebook_tooltip_black_background.9.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable-xhdpi\com_facebook_tooltip_black_background.9.png"
->>>>>>> FETCH_HEAD
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_tooltip_black_bottomnub"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable-xhdpi/com_facebook_tooltip_black_bottomnub.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable-xhdpi\com_facebook_tooltip_black_bottomnub.png"
->>>>>>> FETCH_HEAD
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_tooltip_black_topnub"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable-xhdpi/com_facebook_tooltip_black_topnub.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable-xhdpi\com_facebook_tooltip_black_topnub.png"
->>>>>>> FETCH_HEAD
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_tooltip_black_xout"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable-xhdpi/com_facebook_tooltip_black_xout.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable-xhdpi\com_facebook_tooltip_black_xout.png"
->>>>>>> FETCH_HEAD
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_tooltip_blue_background"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable-xhdpi/com_facebook_tooltip_blue_background.9.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable-xhdpi\com_facebook_tooltip_blue_background.9.png"
->>>>>>> FETCH_HEAD
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_tooltip_blue_bottomnub"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable-xhdpi/com_facebook_tooltip_blue_bottomnub.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable-xhdpi\com_facebook_tooltip_blue_bottomnub.png"
->>>>>>> FETCH_HEAD
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_tooltip_blue_topnub"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable-xhdpi/com_facebook_tooltip_blue_topnub.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable-xhdpi\com_facebook_tooltip_blue_topnub.png"
->>>>>>> FETCH_HEAD
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_tooltip_blue_xout"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable-xhdpi/com_facebook_tooltip_blue_xout.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable-xhdpi\com_facebook_tooltip_blue_xout.png"
->>>>>>> FETCH_HEAD
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_button_like_background"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable-xxhdpi/com_facebook_button_like_background.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable-xxhdpi\com_facebook_button_like_background.png"
->>>>>>> FETCH_HEAD
                 qualifiers="xxhdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_button_like_background_selected"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable-xxhdpi/com_facebook_button_like_background_selected.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable-xxhdpi\com_facebook_button_like_background_selected.png"
->>>>>>> FETCH_HEAD
                 qualifiers="xxhdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_button_like_icon"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable-xxhdpi/com_facebook_button_like_icon.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable-xxhdpi\com_facebook_button_like_icon.png"
->>>>>>> FETCH_HEAD
                 qualifiers="xxhdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_button_like_icon_selected"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable-xxhdpi/com_facebook_button_like_icon_selected.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable-xxhdpi\com_facebook_button_like_icon_selected.png"
->>>>>>> FETCH_HEAD
                 qualifiers="xxhdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_button_like_pressed"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/drawable-xxhdpi/com_facebook_button_like_pressed.png"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\drawable-xxhdpi\com_facebook_button_like_pressed.png"
->>>>>>> FETCH_HEAD
                 qualifiers="xxhdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_friendpickerfragment"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/layout/com_facebook_friendpickerfragment.xml"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\layout\com_facebook_friendpickerfragment.xml"
->>>>>>> FETCH_HEAD
                 qualifiers=""
                 type="layout" />
             <file
                 name="com_facebook_login_activity_layout"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/layout/com_facebook_login_activity_layout.xml"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\layout\com_facebook_login_activity_layout.xml"
->>>>>>> FETCH_HEAD
                 qualifiers=""
                 type="layout" />
             <file
                 name="com_facebook_picker_activity_circle_row"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/layout/com_facebook_picker_activity_circle_row.xml"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\layout\com_facebook_picker_activity_circle_row.xml"
->>>>>>> FETCH_HEAD
                 qualifiers=""
                 type="layout" />
             <file
                 name="com_facebook_picker_checkbox"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/layout/com_facebook_picker_checkbox.xml"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\layout\com_facebook_picker_checkbox.xml"
->>>>>>> FETCH_HEAD
                 qualifiers=""
                 type="layout" />
             <file
                 name="com_facebook_picker_image"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/layout/com_facebook_picker_image.xml"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\layout\com_facebook_picker_image.xml"
->>>>>>> FETCH_HEAD
                 qualifiers=""
                 type="layout" />
             <file
                 name="com_facebook_picker_list_row"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/layout/com_facebook_picker_list_row.xml"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\layout\com_facebook_picker_list_row.xml"
->>>>>>> FETCH_HEAD
                 qualifiers=""
                 type="layout" />
             <file
                 name="com_facebook_picker_list_section_header"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/layout/com_facebook_picker_list_section_header.xml"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\layout\com_facebook_picker_list_section_header.xml"
->>>>>>> FETCH_HEAD
                 qualifiers=""
                 type="layout" />
             <file
                 name="com_facebook_picker_search_box"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/layout/com_facebook_picker_search_box.xml"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\layout\com_facebook_picker_search_box.xml"
->>>>>>> FETCH_HEAD
                 qualifiers=""
                 type="layout" />
             <file
                 name="com_facebook_picker_title_bar"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/layout/com_facebook_picker_title_bar.xml"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\layout\com_facebook_picker_title_bar.xml"
->>>>>>> FETCH_HEAD
                 qualifiers=""
                 type="layout" />
             <file
                 name="com_facebook_picker_title_bar_stub"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/layout/com_facebook_picker_title_bar_stub.xml"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\layout\com_facebook_picker_title_bar_stub.xml"
->>>>>>> FETCH_HEAD
                 qualifiers=""
                 type="layout" />
             <file
                 name="com_facebook_placepickerfragment"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/layout/com_facebook_placepickerfragment.xml"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\layout\com_facebook_placepickerfragment.xml"
->>>>>>> FETCH_HEAD
                 qualifiers=""
                 type="layout" />
             <file
                 name="com_facebook_placepickerfragment_list_row"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/layout/com_facebook_placepickerfragment_list_row.xml"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\layout\com_facebook_placepickerfragment_list_row.xml"
->>>>>>> FETCH_HEAD
                 qualifiers=""
                 type="layout" />
             <file
                 name="com_facebook_search_bar_layout"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/layout/com_facebook_search_bar_layout.xml"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\layout\com_facebook_search_bar_layout.xml"
->>>>>>> FETCH_HEAD
                 qualifiers=""
                 type="layout" />
             <file
                 name="com_facebook_tooltip_bubble"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/layout/com_facebook_tooltip_bubble.xml"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\layout\com_facebook_tooltip_bubble.xml"
->>>>>>> FETCH_HEAD
                 qualifiers=""
                 type="layout" />
             <file
                 name="com_facebook_usersettingsfragment"
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/layout/com_facebook_usersettingsfragment.xml"
-                qualifiers=""
-                type="layout" />
-            <file
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/values/attrs.xml"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\layout\com_facebook_usersettingsfragment.xml"
                 qualifiers=""
                 type="layout" />
             <file
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\values\attrs.xml"
->>>>>>> FETCH_HEAD
                 qualifiers="" >
                 <declare-styleable name="com_facebook_profile_picture_view" >
                     <attr name="preset_size" >
@@ -1204,11 +722,7 @@
                 </declare-styleable>
             </file>
             <file
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/values/colors.xml"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\values\colors.xml"
->>>>>>> FETCH_HEAD
                 qualifiers="" >
                 <color name="com_facebook_picker_search_bar_text" >#bcbdc2
                 </color>
@@ -1220,22 +734,14 @@
                 </color>
             </file>
             <file
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/values/drawables.xml"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\values\drawables.xml"
->>>>>>> FETCH_HEAD
                 qualifiers="" >
                 <drawable name="com_facebook_picker_default_separator_color" >
 #33464c59
                 </drawable>
             </file>
             <file
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/values/strings.xml"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\values\strings.xml"
->>>>>>> FETCH_HEAD
                 qualifiers="" >
                 <string name="com_facebook_picker_done_button_text" >Done
                 </string>
@@ -1295,11 +801,7 @@
                 </string>
             </file>
             <file
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/values/styles.xml"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\values\styles.xml"
->>>>>>> FETCH_HEAD
                 qualifiers="" >
 
                 <style
@@ -1469,11 +971,7 @@ left
                 </dimen>
             </file>
             <file
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/values-es/strings.xml"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\values-es\strings.xml"
->>>>>>> FETCH_HEAD
                 qualifiers="es" >
                 <string name="com_facebook_logo_content_description" >Logo de Facebook
                 </string>
@@ -1527,21 +1025,13 @@ left
                 </string>
             </file>
             <file
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/values-hdpi/dimens.xml"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\values-hdpi\dimens.xml"
->>>>>>> FETCH_HEAD
                 qualifiers="hdpi-v4" >
                 <dimen name="com_facebook_picker_divider_width" >1px
                 </dimen>
             </file>
             <file
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/values-he/strings.xml"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\values-he\strings.xml"
->>>>>>> FETCH_HEAD
                 qualifiers="he" >
                 <string name="com_facebook_picker_done_button_text" >בצע
                 </string>
@@ -1595,11 +1085,7 @@ left
                 </string>
             </file>
             <file
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/values-iw/strings.xml"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\values-iw\strings.xml"
->>>>>>> FETCH_HEAD
                 qualifiers="iw" >
                 <string name="com_facebook_placepicker_subtitle_format" >%1$s • %2$,d היו פה
                 </string>
@@ -1653,49 +1139,29 @@ left
                 </string>
             </file>
             <file
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/values-ldpi/dimens.xml"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\values-ldpi\dimens.xml"
->>>>>>> FETCH_HEAD
                 qualifiers="ldpi-v4" >
                 <dimen name="com_facebook_picker_divider_width" >1px
                 </dimen>
             </file>
             <file
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/values-mdpi/dimens.xml"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\values-mdpi\dimens.xml"
->>>>>>> FETCH_HEAD
                 qualifiers="mdpi-v4" >
                 <dimen name="com_facebook_picker_divider_width" >1px
                 </dimen>
             </file>
             <file
-<<<<<<< HEAD
-                path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/res/values-xhdpi/dimens.xml"
-=======
                 path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\res\values-xhdpi\dimens.xml"
->>>>>>> FETCH_HEAD
                 qualifiers="xhdpi-v4" >
                 <dimen name="com_facebook_picker_divider_width" >2px
                 </dimen>
             </file>
         </source>
-<<<<<<< HEAD
-        <source path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/build/generated/res/rs/release" />
-        <source path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/build/generated/res/generated/release" />
-    </dataSet>
-    <dataSet config="release" >
-        <source path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/src/release/res" />
-=======
         <source path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\build\generated\res\rs\release" />
         <source path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\build\generated\res\generated\release" />
     </dataSet>
     <dataSet config="release" >
         <source path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\src\release\res" />
->>>>>>> FETCH_HEAD
     </dataSet>
 
 </merger>

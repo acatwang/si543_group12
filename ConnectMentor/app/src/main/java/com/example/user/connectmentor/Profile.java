@@ -37,7 +37,7 @@ public class Profile extends Activity {
     List<String> listDataHeader;
     HashMap<String, List<String>> listDataChild;
     ArrayList <HashMap<String, String>> usersList = new ArrayList <HashMap<String, String>>();
-    String user;
+    String usermsg;
     int userid;
 
     /* SharedPreference*/
@@ -47,6 +47,10 @@ public class Profile extends Activity {
     static final String KEY_MAJOR = "major";
     public static final String LOGIN_PREFS = "Login_Prefs" ;
     public static final String SESSION_PREFS = "Session_Prefs" ;
+    public static final String PROFILE_PREFS = "Profile_Prefs" ;
+
+    /* User Profile Data */
+    String aboutmeMst;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,8 +68,8 @@ public class Profile extends Activity {
 
         Intent intent = getIntent();
         try {
-            user = intent.getStringExtra(OverViewActivity.EXTRA_MESSAGE);
-            userid = (int) Long.parseLong(user);
+            usermsg = intent.getStringExtra(OverViewActivity.EXTRA_MESSAGE);
+            userid = (int) Long.parseLong(usermsg);
         }catch (RuntimeException e){
             userid = 9999;
         }
@@ -90,7 +94,10 @@ public class Profile extends Activity {
             //Show content
             textView.setText(user);
             talkButton.setVisibility(View.GONE);
+
+
         } else{ // The user is viewing other member's profile
+            //TODO get username from overviewintent
             textView.setText("Otheruser");
             //textView.setText(recordsList.get(userid).getName());
 
@@ -196,6 +203,10 @@ public class Profile extends Activity {
 
     // Programatically set data
     private void prepareListData(){
+        SharedPreferences profilePref = getSharedPreferences(PROFILE_PREFS,Activity.MODE_PRIVATE);
+        SharedPreferences sessionpref = getSharedPreferences(SESSION_PREFS,Activity.MODE_PRIVATE);
+        String user = sessionpref.getString("Login","");
+
         listDataHeader = new ArrayList<String>();
         listDataChild = new HashMap<String, List<String>>();
 
@@ -204,10 +215,16 @@ public class Profile extends Activity {
         listDataHeader.add("Coursework");
         listDataHeader.add("Skills");
 
+
         // Adding child(Content) data
         List<String> aboutme = new ArrayList<String>();
         // for now we add mock-up information. The content can be get from DB using function getUserInfo(userid)
-        aboutme.add("Hi I am Katharina");
+        //aboutme.add("Hi I am Katharina");
+
+        //Get About Me from sharedprefernce
+        String aboutmemsg = ((profilePref.getString(user,"")=="")? "Hi, I am "+user:profilePref.getString(user,"")); //set default message
+        //aboutme.add(profilePref.getString(user,""));
+        aboutme.add(aboutmemsg);
 
         /* Add Coursework*/
         List<String> coursework = new ArrayList<String>();
@@ -234,6 +251,8 @@ public class Profile extends Activity {
         // Retrieve specific user info based on Intent
     }
 
+
+    /* Intents*/
     public void startConversation(View view){
         Intent talkIntent = new Intent(this, MessageInbox.class);
         startActivity(talkIntent);

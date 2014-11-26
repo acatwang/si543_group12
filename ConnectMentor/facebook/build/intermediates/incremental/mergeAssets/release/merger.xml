@@ -2,17 +2,10 @@
 <merger version="2" >
 
     <dataSet config="main" >
-<<<<<<< HEAD
-        <source path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/src/main/assets" />
-    </dataSet>
-    <dataSet config="release" >
-        <source path="/Users/EricaChan/GitHub/si543_group12/ConnectMentor/facebook/src/release/assets" />
-=======
         <source path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\src\main\assets" />
     </dataSet>
     <dataSet config="release" >
         <source path="C:\Users\user\Documents\GitHub\si543_group12\ConnectMentor\facebook\src\release\assets" />
->>>>>>> FETCH_HEAD
     </dataSet>
 
 </merger>
