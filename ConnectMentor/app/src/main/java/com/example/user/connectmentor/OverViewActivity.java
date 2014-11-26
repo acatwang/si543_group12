@@ -58,7 +58,7 @@ public class OverViewActivity extends Activity {
         memberListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parentAdapter, View view, int position,
                                     long id) {
-                String listname = parentAdapter.getItemAtPosition(position).toString();
+                String listname = recordsList.get(position).get("name").toString();
                 openMemberDetail(listname);
             }
         });
