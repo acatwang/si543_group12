@@ -28,8 +28,4 @@
             android:drawablePadding="5dp"
             android:imeOptions="actionDone"
             />
-<<<<<<< HEAD
 </LinearLayout><!-- From: file:/C:/Users/user/Documents/GitHub/si543_group12/ConnectMentor/facebook/res/layout/com_facebook_search_bar_layout.xml -->
-=======
-</LinearLayout><!-- From: file:/C:/Users/Kushank/Documents/GitHub/si543_group12/ConnectMentor/facebook/res/layout/com_facebook_search_bar_layout.xml -->
->>>>>>> origin/master

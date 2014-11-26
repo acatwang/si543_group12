@@ -37,8 +37,9 @@ public class Profile extends Activity {
     List<String> listDataHeader;
     HashMap<String, List<String>> listDataChild;
     ArrayList <HashMap<String, String>> usersList = new ArrayList <HashMap<String, String>>();
-    String usermsg;
+    String userName;
     int userid;
+    boolean isSelfUser;
 
     /* SharedPreference*/
     public final static String EXTRA_MESSAGE = "edu.umich.teamivore.MESSAGE";
@@ -49,8 +50,6 @@ public class Profile extends Activity {
     public static final String SESSION_PREFS = "Session_Prefs" ;
     public static final String PROFILE_PREFS = "Profile_Prefs" ;
 
-    /* User Profile Data */
-    String aboutmeMst;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,11 +66,15 @@ public class Profile extends Activity {
         initUserList();
 
         Intent intent = getIntent();
+
+            userName = intent.getStringExtra(OverViewActivity.EXTRA_MESSAGE);
         try {
-            usermsg = intent.getStringExtra(OverViewActivity.EXTRA_MESSAGE);
-            userid = (int) Long.parseLong(usermsg);
+            userid = (int) Long.parseLong(userName);
+            isSelfUser = true;
         }catch (RuntimeException e){
-            userid = 9999;
+            //  it's other's profile
+            //userid = 9999;
+
         }
 
 
@@ -85,11 +88,15 @@ public class Profile extends Activity {
         TextView textView = (TextView) findViewById(R.id.textView_username);
         Button talkButton =  (Button) findViewById(R.id.btnTalk);
         Button changeButton = (Button) findViewById(R.id.btnChangeImage);
-        if (userid ==9999){ // Current User
+        Button editButton = (Button) findViewById(R.id.btnEdit);
+
+
+        if (userid ==9999 || userName=="9999"){ // Current User
             //Get username from SharedPrefernce
             SharedPreferences loginsharedpref = getSharedPreferences(LOGIN_PREFS,Activity.MODE_PRIVATE);
             SharedPreferences sessionpref = getSharedPreferences(SESSION_PREFS,Activity.MODE_PRIVATE);
             String user = sessionpref.getString("Login","");
+
 
             //Show content
             textView.setText(user);
@@ -98,11 +105,12 @@ public class Profile extends Activity {
 
         } else{ // The user is viewing other member's profile
             //TODO get username from overviewintent
-            textView.setText("Otheruser");
+            textView.setText(userName);
             //textView.setText(recordsList.get(userid).getName());
 
             // Show let's talk button and hide change image button
             changeButton.setVisibility(View.GONE);
+            editButton.setVisibility(View.GONE);
 
         }
 
@@ -121,8 +129,6 @@ public class Profile extends Activity {
     }
 
     private void initUserList(){
-
-
         usersList.add(createMember("Andy", "IOE"));
         usersList.add(createMember("Katharina", "SI"));
         usersList.add(createMember("Kurt", "CS"));
@@ -211,10 +217,10 @@ public class Profile extends Activity {
         listDataChild = new HashMap<String, List<String>>();
 
         /* Set List Data Header */
+
         listDataHeader.add("About me");
         listDataHeader.add("Coursework");
         listDataHeader.add("Skills");
-
 
         // Adding child(Content) data
         List<String> aboutme = new ArrayList<String>();
@@ -227,6 +233,7 @@ public class Profile extends Activity {
         aboutme.add(aboutmemsg);
 
         /* Add Coursework*/
+        //TODO: add from sharepreference
         List<String> coursework = new ArrayList<String>();
         // for now we add mock-up information. The content can be get from DB using function getUserInfo(userid)
         coursework.add("Java");
@@ -235,6 +242,7 @@ public class Profile extends Activity {
 
         // Adding child(Content) data
         List<String> skills = new ArrayList<String>();
+        //TODO: add from sharepreference
         // for now we add mock-up information. The content can be get from DB using function getUserInfo(userid)
         skills.add("Android");
         skills.add("programming");

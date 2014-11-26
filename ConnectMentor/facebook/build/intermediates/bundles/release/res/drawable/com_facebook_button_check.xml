@@ -18,8 +18,4 @@
   <item android:state_checked="true" android:drawable="@drawable/com_facebook_button_check_on" />
   <item android:drawable="@drawable/com_facebook_button_check_off" />
 </selector>
-<<<<<<< HEAD
 <!-- From: file:/C:/Users/user/Documents/GitHub/si543_group12/ConnectMentor/facebook/res/drawable/com_facebook_button_check.xml -->
-=======
-<!-- From: file:/C:/Users/Kushank/Documents/GitHub/si543_group12/ConnectMentor/facebook/res/drawable/com_facebook_button_check.xml -->
->>>>>>> origin/master
