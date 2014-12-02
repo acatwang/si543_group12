@@ -133,12 +133,18 @@ public class Profile extends Activity {
                 //Nothing here ever fires
                 System.err.println(groupPosition);
                 System.err.println(childPosition);
-                //Toast.makeText(getApplicationContext(), "child clicked", Toast.LENGTH_SHORT).show();
+
+                //Reference:
+                // http://stackoverflow.com/questions/11534435/how-to-get-item-from-child-list-at-expandable-listview
+                //http://stackoverflow.com/questions/16888574/expandablelistview-child-click-listener-not-firing
 
                 if(groupPosition==1){ // Course taken
                     String c =parent.getExpandableListAdapter().getChild(groupPosition, childPosition).toString();
 
                     filterByCourse(v,c);
+                }else{
+                    Toast.makeText(getApplicationContext(), "Oops, can't filter by this.", Toast.LENGTH_SHORT).show();
+
                 }
                 return true;
             }
