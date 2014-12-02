@@ -5,6 +5,7 @@ import android.app.ActionBar;
 import android.app.Activity;
 import android.app.FragmentManager;
 import android.content.ClipData;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -19,6 +20,7 @@ import android.widget.TableRow;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
@@ -29,9 +31,12 @@ public class Filter extends Activity {
     GridLayout gridGender;
     GridLayout majorGrid;
     // Declare Selection
-    private String [] majors;
+    private ArrayList majors;
     private String[] genders = new String[]{"Male", "Female"};
     String intentMsg="";
+
+    public static final String LOGIN_PREFS = "Login_Prefs" ;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -138,10 +143,10 @@ public class Filter extends Activity {
 
     private void initMajorGrid(){
 
-        for (int i =0; i<majors.length;i++){
+        for (int i =0; i<majors.size();i++){
 
             final TextView tv = new TextView(this);
-            tv.setText(majors[i]);
+            tv.setText((String) majors.get(i));
             tv.setBackgroundColor(Color.WHITE);
             tv.setTextSize(getResources().getDimension(R.dimen.fillter_textsize));
             tv.setPadding(2, 2, 2, 2);
@@ -159,18 +164,9 @@ public class Filter extends Activity {
             });
 
 
-            //TODO:set column number
-            int rowNum= ((majors.length<=5)?1:((majors.length/5) +1));
-            int colNum= ((majors.length<=5)?majors.length:5);
-            /*
-            if (majors.length <=5){
-                rowNum = 1;
-                colNum = majors.length;
-            }else if (majors.length>5){
-                rowNum = (majors.length/5) +1;
-                colNum =5;
-            }
-            */
+            //Determine column number
+            int rowNum= ((majors.size()<=5)?1:((majors.size()/5) +1));
+            int colNum= ((majors.size()<=5)?majors.size():5);
 
             majorGrid.setRowCount(rowNum);
             majorGrid.setColumnCount(colNum);
@@ -190,19 +186,27 @@ public class Filter extends Activity {
 
     }
 
-    /** Save the selected conditions **/
-    public void setMajorView(){
-        // create Textview for each marjor and set a onClickListener to store the selected value
-    }
+    public ArrayList getMajors(){
+        SharedPreferences loginsharedpref = getSharedPreferences(LOGIN_PREFS,Activity.MODE_PRIVATE);
 
-
-    public void setGenderView(){
-        // create Textview for each gender and set a onClickListener to store the selected value
-    }
-
-    public String [] getMajors(){
         //TODO: get major list from shared preference
-        return new String [] {"CS","SI","IOE","EE"};
+        ArrayList majorlist= new ArrayList();
+        Map<String, ?> allEntries = loginsharedpref.getAll();
+        for (Map.Entry<String, ?> entry : allEntries.entrySet()) {
+            String m = entry.getValue().toString().split(":")[1];
+            if (!Arrays.asList(majorlist).contains(m)) {
+                majorlist.add(m); //major
+            }
+        }
+
+        String [] demoMajor = new String [] {"IOE","EE"}; // Majors of demo data
+        for (int i=0; i<demoMajor.length;i++){
+            if (!Arrays.asList(majorlist).contains(demoMajor[i])){
+                majorlist.add(demoMajor[i]);
+            }
+        }
+
+        return majorlist;
     }
 
 
