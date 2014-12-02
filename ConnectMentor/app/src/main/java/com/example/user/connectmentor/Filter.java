@@ -176,8 +176,9 @@ public class Filter extends Activity {
             params.setMargins(10,10,10,10);
             params.setGravity(Gravity.CENTER);
             //TODO: if multiple rows
-            params.columnSpec = GridLayout.spec(i);
-            params.rowSpec = GridLayout.spec(0);
+            params.columnSpec = GridLayout.spec(i%5);
+            params.rowSpec = GridLayout.spec(i/5);
+
             tv.setLayoutParams(params);
 
             majorGrid.addView(tv);
