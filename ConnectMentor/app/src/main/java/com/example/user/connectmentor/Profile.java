@@ -63,10 +63,9 @@ public class Profile extends Activity {
 
         addListnerOnButton();
 
-        // Get the message from the intent
-
         initUserList();
 
+        /* Get the message from the intent */
         Intent intent = getIntent();
         userName = intent.getStringExtra(OverViewActivity.EXTRA_MESSAGE);
         try {
@@ -74,14 +73,10 @@ public class Profile extends Activity {
             userid = (int) Long.parseLong(userName);
             isSelfUser = true;
         }catch (RuntimeException e){
-            //  Intent from Overview
-            //isSelfUser = false;
+            //  Intent from Overview or from EditProfile
             isSelfUser = (userName==null)?true:false;
         }
-        /*finally{
-            // Intent from EditProfile
-            isSelfUser = true;
-        }*/
+
 
 
         /* Generate the text view*/
