@@ -1,4 +1,4 @@
-// Edit by Yi-Yin Wang
+// Created by Yi-Yin Wang
 package com.example.user.connectmentor;
 
 import android.app.ActionBar;
@@ -26,6 +26,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Profile extends Activity {
 
@@ -36,16 +37,17 @@ public class Profile extends Activity {
     ExpandableListView expListView;
     List<String> listDataHeader;
     HashMap<String, List<String>> listDataChild;
-    ArrayList <HashMap<String, String>> usersList = new ArrayList <HashMap<String, String>>();
+    HashMap<String, String> usersList = new HashMap<String, String>();
+
     String userName;
+    String major;
     int userid;
     boolean isSelfUser;
 
     /* SharedPreference*/
     public final static String EXTRA_MESSAGE = "edu.umich.teamivore.MESSAGE";
-    ArrayList <HashMap<String, String>> recordsList = new ArrayList <HashMap<String, String>>();
-    static final String KEY_NAME = "name";
-    static final String KEY_MAJOR = "major";
+    //ArrayList <HashMap<String, String>> recordsList = new ArrayList <HashMap<String, String>>();
+
     public static final String LOGIN_PREFS = "Login_Prefs" ;
     public static final String SESSION_PREFS = "Session_Prefs" ;
     public static final String PROFILE_PREFS = "Profile_Prefs" ;
@@ -66,59 +68,66 @@ public class Profile extends Activity {
         initUserList();
 
         Intent intent = getIntent();
-
-            userName = intent.getStringExtra(OverViewActivity.EXTRA_MESSAGE);
+        userName = intent.getStringExtra(OverViewActivity.EXTRA_MESSAGE);
         try {
+            //userName = intent.getStringExtra(OverViewActivity.EXTRA_MESSAGE);
             userid = (int) Long.parseLong(userName);
             isSelfUser = true;
         }catch (RuntimeException e){
-            //  it's other's profile
-            //userid = 9999;
-
+            //  Intent from Overview
+            //isSelfUser = false;
+            isSelfUser = (userName==null)?true:false;
         }
+        /*finally{
+            // Intent from EditProfile
+            isSelfUser = true;
+        }*/
 
 
-        /* Create the text view*/
+        /* Generate the text view*/
 
-        //show ID for debug use
-        TextView textViewID = (TextView) findViewById(R.id.textView_userid);
-        textViewID.setText("User ID: "+ userid);
-
-        // TODO: rogramatically Set User Name
         TextView textView = (TextView) findViewById(R.id.textView_username);
+        TextView textView_major = (TextView) findViewById(R.id.textView_usermajor);
         Button talkButton =  (Button) findViewById(R.id.btnTalk);
         Button changeButton = (Button) findViewById(R.id.btnChangeImage);
         Button editButton = (Button) findViewById(R.id.btnEdit);
 
 
-        if (userid ==9999 || userName=="9999"){ // Current User
-            //Get username from SharedPrefernce
-            SharedPreferences loginsharedpref = getSharedPreferences(LOGIN_PREFS,Activity.MODE_PRIVATE);
-            SharedPreferences sessionpref = getSharedPreferences(SESSION_PREFS,Activity.MODE_PRIVATE);
-            String user = sessionpref.getString("Login","");
+        //Get data from SharedPrefernce
+        SharedPreferences loginsharedpref = getSharedPreferences(LOGIN_PREFS,Activity.MODE_PRIVATE);
+        SharedPreferences sessionpref = getSharedPreferences(SESSION_PREFS,Activity.MODE_PRIVATE);
+        String user = (isSelfUser? sessionpref.getString("Login",""):userName);
 
+        try {
+            major = loginsharedpref.getString(user, "").split(":")[1]; //parse the shared preference
+        }
+        catch (ArrayIndexOutOfBoundsException e){
+            // Catch the exception for the demo data
+            // The demo data are initiated when the activity is called
+            // The value stored in a hashmap called usersList
 
-            //Show content
-            textView.setText(user);
+            major = usersList.get(user).toString();
+
+        }
+
+        /* Programatically Set User Name and display button */
+
+        textView.setText(user);
+        textView_major.setText(major);
+
+        if (isSelfUser){
             talkButton.setVisibility(View.GONE);
-
-
         } else{ // The user is viewing other member's profile
-            //TODO get username from overviewintent
-            textView.setText(userName);
-            //textView.setText(recordsList.get(userid).getName());
-
             // Show let's talk button and hide change image button
             changeButton.setVisibility(View.GONE);
             editButton.setVisibility(View.GONE);
-
         }
 
 
         // get the listview
         expListView = (ExpandableListView) findViewById(R.id.lvExp);
         // Get Data of User
-        prepareListData();
+        prepareListData(user);
         listAdapter = new ExpandableListAdapter(this, listDataHeader, listDataChild);
         // setting list adapter
         expListView.setAdapter(listAdapter);
@@ -128,21 +137,17 @@ public class Profile extends Activity {
         getUserInfo();
     }
 
+    /* Demo Data */
     private void initUserList(){
-        usersList.add(createMember("Andy", "IOE"));
-        usersList.add(createMember("Katharina", "SI"));
-        usersList.add(createMember("Kurt", "CS"));
-        usersList.add(createMember("Kush", "SI"));
-        usersList.add(createMember("Alison", "SI"));
-        usersList.add(createMember("Erica", "SI"));
+        usersList.put("Colin","IOE");
+        usersList.put("Mike","SI");
+        usersList.put("Kathryn","SI");
+        usersList.put("Amber","SI");
+        usersList.put("Uday","EE");
+
     };
 
-    private HashMap<String, String> createMember(String key, String name) {
-        HashMap<String, String> team = new HashMap<String, String>();
-        team.put(KEY_NAME, key);
-        team.put(KEY_MAJOR, name);
-        return team;
-    }
+    /* Set up menu bar at the bottom */
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -152,7 +157,6 @@ public class Profile extends Activity {
         return true;
     }
 
-    /* Set up menu bar at the bottom */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -194,6 +198,7 @@ public class Profile extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
+    //Change picture
     public void addListnerOnButton(){
         image = (ImageView) findViewById(R.id.imageView1);
         button = (Button) findViewById(R.id.btnChangeImage);
@@ -207,11 +212,14 @@ public class Profile extends Activity {
         });
     }
 
-    // Programatically set data
-    private void prepareListData(){
+    // Programatically set Expandable list
+    private void prepareListData(String user){
+
         SharedPreferences profilePref = getSharedPreferences(PROFILE_PREFS,Activity.MODE_PRIVATE);
+        /*
         SharedPreferences sessionpref = getSharedPreferences(SESSION_PREFS,Activity.MODE_PRIVATE);
         String user = sessionpref.getString("Login","");
+        */
 
         listDataHeader = new ArrayList<String>();
         listDataChild = new HashMap<String, List<String>>();
