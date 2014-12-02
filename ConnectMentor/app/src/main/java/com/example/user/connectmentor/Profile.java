@@ -127,6 +127,22 @@ public class Profile extends Activity {
         // setting list adapter
         expListView.setAdapter(listAdapter);
 
+        expListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener(){
+            @Override
+            public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
+                //Nothing here ever fires
+                System.err.println(groupPosition);
+                System.err.println(childPosition);
+                //Toast.makeText(getApplicationContext(), "child clicked", Toast.LENGTH_SHORT).show();
+
+                if(groupPosition==1){ // Course taken
+                    String c =parent.getExpandableListAdapter().getChild(groupPosition, childPosition).toString();
+
+                    filterByCourse(v,c);
+                }
+                return true;
+            }
+        });
 
         //TODO: Connect with database to get user info
         getUserInfo();
@@ -279,5 +295,14 @@ public class Profile extends Activity {
 
         startActivity(editIntent);
     }
+
+    public void filterByCourse(View view, String course){
+        Intent filterIntent = new Intent(this, OverViewActivity.class);
+        filterIntent.putExtra("Course",course);
+        startActivity(filterIntent);
+    }
+
 }
+
+
 
