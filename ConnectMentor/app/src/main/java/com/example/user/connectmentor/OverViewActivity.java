@@ -10,9 +10,13 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Iterator;
 import java.util.Map;
 import java.util.List;
 import java.util.HashMap;
+import java.util.Set;
+
 import android.content.Intent;
 import android.view.View;
 import android.widget.AdapterView;
@@ -29,6 +33,7 @@ public class OverViewActivity extends Activity {
     /*Source: http://www.androidhive.info/2012/02/android-custom-listview-with-image-and-text/*/
     public final static String EXTRA_MESSAGE = "edu.umich.teamivore.MESSAGE";
     ArrayList <HashMap<String, String>> recordsList = new ArrayList <HashMap<String, String>>();
+    ArrayList <HashMap<String, String>> filterrecordsList = new ArrayList <HashMap<String, String>>();
     static final String KEY_NAME = "name";
     static final String KEY_MAJOR = "major";
     public static final String LOGIN_PREFS = "Login_Prefs" ;
@@ -48,12 +53,26 @@ public class OverViewActivity extends Activity {
                 getActionBar().setTitle("User List - " + user);
             }
         }
-
         /*Source:https://github.com/aboudalia/Teamivore/blob/master/Teamivore/app/src/main/java/edu/umich/teamivore/OverviewActivity.java*/
         /*Source: http://www.androidhive.info/2012/02/android-custom-listview-with-image-and-text/*/
         ListView memberListView = (ListView) findViewById(R.id.listview1);
-        initializelist();
-        OverviewListAdapter adapter=new OverviewListAdapter(this, recordsList);
+
+        Intent filterintent = getIntent();
+        String filtermessage = filterintent.getStringExtra("FilterMsg");
+        if (filtermessage != null) {
+            if (!filtermessage.isEmpty()) {
+                String[] majors = filtermessage.split(";");
+                initializelist();
+                filterlist(majors);
+            }
+            else {
+                initializelist();
+            }
+        }
+        else {
+            initializelist();
+        }
+        OverviewListAdapter adapter = new OverviewListAdapter(this, recordsList);
         memberListView.setAdapter(adapter);
         memberListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parentAdapter, View view, int position,
@@ -62,7 +81,8 @@ public class OverViewActivity extends Activity {
                 openMemberDetail(listname);
             }
         });
-    }
+        }
+
 
 
     @Override
@@ -108,28 +128,37 @@ public class OverViewActivity extends Activity {
         return super.onOptionsItemSelected(item);
     }
     /*Source:https://github.com/aboudalia/Teamivore/blob/master/Teamivore/app/src/main/java/edu/umich/teamivore/OverviewActivity.java*/
-    private void initializelist()
-    {
+    private void initializelist() {
         //Demo data
-        recordsList.add(createMember("Colin","IOE"));
-        recordsList.add(createMember("Mike","SI"));
-        recordsList.add(createMember("Kathryn","SI"));
-        recordsList.add(createMember("Amber","SI"));
-        recordsList.add(createMember("Uday","EE"));
+        recordsList.add(createMember("Colin", "IOE"));
+        recordsList.add(createMember("Mike", "SI"));
+        recordsList.add(createMember("Kathryn", "SI"));
+        recordsList.add(createMember("Amber", "SI"));
+        recordsList.add(createMember("Uday", "EE"));
         //Get names and major stored in shared preferences and display them (Except current user)
-        SharedPreferences loginsharedpref = getSharedPreferences(LOGIN_PREFS,Activity.MODE_PRIVATE);
-        SharedPreferences sessionpref = getSharedPreferences(SESSION_PREFS,Activity.MODE_PRIVATE);
-        String user = sessionpref.getString("Login","");
+        SharedPreferences loginsharedpref = getSharedPreferences(LOGIN_PREFS, Activity.MODE_PRIVATE);
+        SharedPreferences sessionpref = getSharedPreferences(SESSION_PREFS, Activity.MODE_PRIVATE);
+        String user = sessionpref.getString("Login", "");
         Map<String, ?> allEntries = loginsharedpref.getAll();
         for (Map.Entry<String, ?> entry : allEntries.entrySet()) {
             if (!entry.getKey().toString().equals(user)) {
                 recordsList.add(createMember(entry.getKey().toString(), entry.getValue().toString().split(":")[1])); //major
             }
         }
-
-
+    }
+    private void filterlist(String[] majors) {
+        //Source:http://stackoverflow.com/questions/15979828/loop-through-an-arraylist-of-hashmaps-java
+       Iterator<HashMap<String, String>> it = recordsList.iterator();
+        while (it.hasNext()) {
+            HashMap<String, String> hmap = (HashMap<String, String>) it.next();
+            if (!Arrays.asList(majors).contains(hmap.get("major").toString())) {
+                it.remove(); // avoids a ConcurrentModificationException
+            }
+        }
 
     }
+
+
     /*Source:https://github.com/aboudalia/Teamivore/blob/master/Teamivore/app/src/main/java/edu/umich/teamivore/OverviewActivity.java*/
      /*Source: http://www.androidhive.info/2012/02/android-custom-listview-with-image-and-text/*/
     private HashMap<String, String> createMember(String key, String name) {
