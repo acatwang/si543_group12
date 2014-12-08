@@ -6,6 +6,7 @@ import android.app.Activity;
 import android.app.FragmentManager;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -287,8 +288,20 @@ public class Profile extends Activity {
 
     /* Intents*/
     public void startConversation(View view){
-        Intent talkIntent = new Intent(this, MessageInbox.class);
-        startActivity(talkIntent);
+        Intent intent=null, chooser=null;
+
+        if(view.getId()==R.id.btnTalk)
+        {
+            intent=new Intent(Intent.ACTION_SEND);
+            intent.setData(Uri.parse("mailto:"));
+            String[] to={"ericachan11@gmail.com"};
+            intent.putExtra(Intent.EXTRA_EMAIL, to);
+            intent.putExtra(Intent.EXTRA_SUBJECT,"Invitation from ConnectMentor");
+            intent.putExtra(Intent.EXTRA_SUBJECT,"Sent from ConnectMentor");
+            intent.setType("message/rfc822");
+            chooser=Intent.createChooser(intent,"Sent Email");
+            startActivity(chooser);
+        }
     }
 
     public void editProfile(View view){
