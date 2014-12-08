@@ -33,7 +33,6 @@ public class OverViewActivity extends Activity {
     /*Source: http://www.androidhive.info/2012/02/android-custom-listview-with-image-and-text/*/
     public final static String EXTRA_MESSAGE = "edu.umich.teamivore.MESSAGE";
     ArrayList <HashMap<String, String>> recordsList = new ArrayList <HashMap<String, String>>();
-    ArrayList <HashMap<String, String>> filterrecordsList = new ArrayList <HashMap<String, String>>();
     static final String KEY_NAME = "name";
     static final String KEY_MAJOR = "major";
     public static final String LOGIN_PREFS = "Login_Prefs" ;
@@ -55,6 +54,7 @@ public class OverViewActivity extends Activity {
         }
         /*Source:https://github.com/aboudalia/Teamivore/blob/master/Teamivore/app/src/main/java/edu/umich/teamivore/OverviewActivity.java*/
         /*Source: http://www.androidhive.info/2012/02/android-custom-listview-with-image-and-text/*/
+        //Display User List based on no criteria or filter criteria - filters only majors (any number)
         ListView memberListView = (ListView) findViewById(R.id.listview1);
 
         Intent filterintent = getIntent();
@@ -77,6 +77,7 @@ public class OverViewActivity extends Activity {
         memberListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parentAdapter, View view, int position,
                                     long id) {
+                //Send user list selected name/text to Profile class
                 String listname = recordsList.get(position).get("name").toString();
                 openMemberDetail(listname);
             }
@@ -148,6 +149,9 @@ public class OverViewActivity extends Activity {
     }
     private void filterlist(String[] majors) {
         //Source:http://stackoverflow.com/questions/15979828/loop-through-an-arraylist-of-hashmaps-java
+        //Remove from records list the rows that are not selected in filter => Only show rows selected by Filter
+        // Use iterator to avoid a concurrent exception i.e. avoid error due to looping through array list being
+        // modified by the program
        Iterator<HashMap<String, String>> it = recordsList.iterator();
         while (it.hasNext()) {
             HashMap<String, String> hmap = (HashMap<String, String>) it.next();
