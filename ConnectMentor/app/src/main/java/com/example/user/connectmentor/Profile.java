@@ -297,7 +297,7 @@ public class Profile extends Activity {
             String[] to={"ericachan11@gmail.com"};
             intent.putExtra(Intent.EXTRA_EMAIL, to);
             intent.putExtra(Intent.EXTRA_SUBJECT,"Invitation from ConnectMentor");
-            intent.putExtra(Intent.EXTRA_SUBJECT,"Sent from ConnectMentor");
+            intent.putExtra(Intent.EXTRA_TEXT,"Sent from ConnectMentor");
             intent.setType("message/rfc822");
             chooser=Intent.createChooser(intent,"Sent Email");
             startActivity(chooser);
